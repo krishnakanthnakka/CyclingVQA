@@ -267,244 +267,40 @@
 </div>
 </section>
 
-<section class="hero teaser">
+
+
+
+
+
+
+
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Experimental Results</h2>
+      </div>
+    </div>
 
-      <!-- Subsection heading -->
-      <h3 class="title is-4" style="margin-bottom: 0.5em; text-align: left;">
-        Group Interventions on Latent Neurons
-      </h3>
-
-      <!-- Short paragraph -->
-      <p class="content has-text-justified" style="font-size: 1.05em; margin-bottom: 1em;">
-        We investigate the role of class-level latent neurons by selectively activating or deactivating
-        the most influential ones. This helps us understand how specific neuron groups contribute to
-        downstream predictions and model interpretability.
-      </p>
-
-      <!-- Figure -->
-      <figure style="text-align: center; margin: 0;">
-        <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
-
-          <!-- First subfigure -->
-          <figure style="margin: 0; flex: 1;">
-            <img src="./images/media/topk_on_combined.png" 
-                 alt="Suspicious Calcification" 
-                 style="width: 100%; border: 1px solid #ccc; border-radius: 8px;">
-            <figcaption style="margin-top: 6px; font-size: 0.9em;">
-              (a) Top-k class-level latent neurons activated
-            </figcaption>
-          </figure>
-
-          <!-- Second subfigure -->
-          <figure style="margin: 0; flex: 1;">
-            <img src="./images/media/topk_off_combined.png" 
-                 alt="Benign Mass" 
-                 style="width: 100%; border: 1px solid #ccc; border-radius: 8px;">
-            <figcaption style="margin-top: 6px; font-size: 0.9em;">
-              (b) Top-k class-level latent neurons deactivated
-            </figcaption>
-          </figure>
-
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="publication-image">
+          <img src="images/leaderboard.png" alt="CyclingVQA Leaderboard" style="width: 100%; height: auto;">
         </div>
-
-        <!-- Main figure caption -->
-        <figcaption style="margin-top: 15px; font-size: 1em; text-align: left;">
-          <b>Figure:</b> Group interventions on class-level latent neurons. Left: Top-k activated intervention—only the top-k class-specific neurons are retained, and all others are zeroed out. Right: Top-k deactivated intervention—the top-k neurons are zeroed out while the rest remain unchanged. We observe that as few as 10 neurons can significantly affect downstream predictions, highlighting their relevance.
-        </figcaption>
-      </figure>
-
-    </div>
-  </div>
-</section>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-
-      <!-- Subsection heading -->
-      <h3 class="title is-4" style="margin-bottom: 0.5em; text-align: left;">
-        Spatial Alignment Between SAE Neurons and Breast Concept Regions
-      </h3>
-
-      <!-- Introductory sentence -->
-      <p class="content has-text-justified" style="font-size: 1.05em; margin-bottom: 1em;">
-        To quantitatively evaluate the spatial alignment between SAE latent activations
-        and annotated breast concept regions, we threshold each latent heatmap at the 
-        95<sup>th</sup> percentile and extract rectangular bounding boxes to approximate
-        predicted concept locations.
-      </p>
-
-      <!-- Caption above image -->
-      <p style="font-size: 1em; color: #555; margin-bottom: 10px; text-align: left;">
-        <b>Figure:</b> Mean Average Precision (mAP) for breast concept localization using the
-        top-10 class-level latent neuron activations for class <em>c</em> = 1 across different settings.
-      </p>
-
-      <!-- Image -->
-      <div style="text-align: center;">
-        <img src="./images/media/iou.png" 
-             alt="IoU overlap" 
-             style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+        <br>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Table 2. Evaluation of VLMs on the CyclingVQA benchmark.</strong> We report accuracy (%) across 
+            eight tasks, observing that generalist models outperform driving-centric VLMs overall. 
+            The results highlight a significant performance gap in specialized cyclist-assistive reasoning 
+            tasks even for models trained on automotive datasets.
+          </p>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
 
-
-
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-
-      <!-- Subsection heading -->
-      <h3 class="title is-4" style="margin-bottom: 0.5em; text-align: left;">
-        Visualization of Class-Level Latent Neurons
-      </h3>
-
-      <!-- Introductory sentence -->
-      <p class="content has-text-justified" style="font-size: 1.05em; margin-bottom: 1em;">
-        We visualize spatial activations of the most influential latent neurons in the fine-tuned  and pretrained 
-        models for mass and calcification concept predictions, and seek to understand if they align with clinically meaningful regions.
-        We show the ground-truth regions of these concept in the red boxes, however, this information is never used during the training time.
-
-      </p>
-
-      <!-- Caption above image -->
-      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
-        Visualization of class-level latent neurons for Finetuned (Suspicious Calcification) model
-      </h2>
-
-      <!-- Image -->
-      <div style="text-align: center;">
-        <img src="./images/media/latent_visualization_Suspicious_Calcification_finetuned_new.png" 
-             alt="Latent visualization of Suspicious Calcification" 
-             style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="text-align: center;">
-
-      <!-- Caption Above Image -->
-      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
-        Visualization of class-level latent neurons for Finetuned (Mass) model
-      </h2>
-
-      <!-- Image -->
-      <img src="./images/media/latent_visualization_Mass_finetuned_new.png" 
-           alt="Latent visualization of Suspicious Calcification" 
-           style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
-
-    </div>
-  </div>
-</section>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="text-align: center;">
-
-      <!-- Caption Above Image -->
-      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
-        Visualization of class-level latent neurons for Pretrained (Suspicious Calcification) model
-      </h2>
-
-      <!-- Image -->
-      <img src="./images/media/latent_visualization_Suspicious_Calcification_pretrained_new.png" 
-           alt="Latent visualization of Suspicious Calcification" 
-           style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
-
-    </div>
-  </div>
-</section>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="text-align: center;">
-
-      <!-- Caption Above Image -->
-      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
-        Visualization of class-level latent neurons for Pretrained (Mass) model
-      </h2>
-
-      <!-- Image -->
-      <img src="./images/media/latent_visualization_Mass_pretrained_new.png" 
-           alt="Latent visualization of Suspicious Calcification" 
-           style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-
-      <!-- Subsection heading -->
-      <h3 class="title is-4" style="margin-bottom: 0.5em; text-align: left;">
-        Latent Neuron Separation: Fine-Tuned vs. Pretrained
-      </h3>
-
-      <!-- Introductory sentence -->
-      <p class="content has-text-justified" style="font-size: 1.05em; margin-bottom: 1em;">
-        We observe that the separation between class-wise mean activations becomes 
-        significantly more pronounced in the fine-tuned model, suggesting that 
-        fine-tuning sharpens the latent space to better distinguish the presence 
-        of breast concepts.
-      </p>
-
-      <!-- Caption above image -->
-      <p style="font-size: 1em; color: #555; margin-bottom: 10px; text-align: left;">
-        <b>Figure:</b> Mean latent activation vectors for each class (<em>c</em> = 1 indicates 
-        the presence of the concept) in the pretrained model (left) and fine-tuned model 
-        (right) for the suspicious calcification concept.
-      </p>
-
-      <!-- Image -->
-      <div style="text-align: center;">
-        <img src="./images/media/latent_separation.png" 
-             alt="Latent neuron separation between pretrained and fine-tuned models" 
-             style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">Citation</h2>
-      <pre><code>
-  @InProceedings{Nakka_2025_MICCAI,
-    author    = {Nakka, Krishna Kanth},
-    title     = {Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders},
-    booktitle = {Proceedings of the  Deep Breast Workshop on AI and Imaging for Diagnostic and Treatment Challenges in Breast Care, MICCAI 2025},
-    month     = {September},
-    year      = {2025},
-}
-  </code></pre>
-    </div>
-  </section>
 
 
 
