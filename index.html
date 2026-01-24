@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders">
+  <meta name="keywords" content="multimodal chatbot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MammoSAE</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="images/breasticon.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/gradio.js"></script>
+</head>
+
+<style>
+    .section {
+    margin-bottom: -30px; /* Adjust this value as needed to reduce the space */
+  }
+  .expandable-card .card-text-container {
+    max-height: 200px;
+    overflow-y: hidden;
+    position: relative;
+  }
+
+  .expandable-card.expanded .card-text-container {
+    max-height: none;
+  }
+
+  .expand-btn {
+    position: relative;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* margin-top: -20px; */
+    /* justify-content: center; */
+    color: #510c75;
+    border-color: transparent;
+  }
+
+  .expand-btn:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+    text-decoration: none;
+    border-color: transparent;
+    color: #510c75;
+  }
+
+  .expand-btn:focus {
+    outline: none;
+    text-decoration: none;
+  }
+
+  .expandable-card:not(.expanded) .card-text-container:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1));
+  }
+
+  .expandable-card:not(.expanded) .expand-btn {
+    margin-top: -40px;
+  }
+
+  .card-body {
+    padding-bottom: 5px;
+  }
+
+  .vertical-flex-layout {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .figure-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .adjustable-font-size {
+    font-size: calc(0.5rem + 2vw);
+  }
+
+  .chat-history {
+    flex-grow: 1;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  #gradio pre {
+    background-color: transparent;
+  }
+</style>
+
+
+<body>
+
+
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img src="images/breasticon.png" alt="MammoSAE" width="100" style="margin-bottom: 1rem;">
+          
+          <h1 class="title is-1 publication-title">
+            Mammo-SAE: 
+            <span class="is-size-2">
+              <span class="is-size-1">I</span>nterpreting 
+              <span class="is-size-1">B</span>reast 
+              <span class="is-size-1">C</span>ancer 
+              <span class="is-size-1">C</span>oncept 
+              <span class="is-size-1">L</span>earning with 
+              <span class="is-size-1">S</span>parse 
+              <span class="is-size-1">A</span>utoEncoders
+            </span>
+            <br>
+            <span class="is-size-4" style="color: #5a5a5a; font-weight: normal;">[DeepBreath, MICCAI 2025]</span>
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=g_21RKoAAAAJ" target="_blank" style="color:#f68946; font-weight:bold;">Krishna Kanth Nakka</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors mb-4">
+            <span class="author-block">Bavaria, Germany</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2507.15227" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/krishnakanthnakka/MammoSAE.git" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/KKNakka/MammoSAE" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><span>🤗</span></span>
+                  <span>Hugging Face</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="images/P2_Krishna_Kanth_Nakka_Mammo-SAE_Poster.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-palette"></i></span>
+                  <span>Poster</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="text-align: center;">
+
+      <!-- Image -->
+      <img src="./images/mammosae.png" 
+           alt="Mammo-SAE Framework" 
+           style="max-width: 100%; border-radius: 8px; border: 0px solid #ccc;">
+
+      <!-- Caption Below Image -->
+      <p style="text-align: justify; margin-top: 12px; font-size: 0.95em; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <strong>Mammo-SAE Framework.</strong> The SAE is first trained on patch-level CLIP features 
+        <em><strong>x<sub>j</sub> ∈ ℝ<sup>d</sup></strong></em> at any given layer, projecting them into a high-dimensional, 
+        interpretable sparse latent space <em><strong>z ∈ ℝ<sup>h</sup></strong></em>, and decoding them back for reconstruction. 
+        Once trained, the SAE is used to analyze which latent neurons are activated and what semantic information they encode. 
+        We also perform targeted interventions in the latent neuron space to assess their influence on downstream label prediction. 
+        We observe the learned latents capture diverse regions such as <em>nipple regions, mass regions</em>, and background areas. 
+        Red boxes indicate ground-truth mass localization.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section" style="background-color: #efeff081;"> <!-- efeff081 #e3f2fd; --> 
+  <div class="container is-max-desktop">
+    <!-- Highlights -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">🔥 Highlights</h2>
+        <div class="content has-text-justified">
+          <ol type="1">
+            <li>
+  <b>Mammo-SAE Introduction.</b> 
+  We propose <code>Mammo-SAE</code>, a sparse autoencoder trained on visual features from Mammo-CLIP, 
+  a vision–language model pretrained on mammogram image–report pairs. 
+  Mammo-SAE aims to enhance interpretability in breast imaging by learning latent neurons 
+  that are human-interpretable. It first identifies highly activated latent neurons 
+  and then conducts interventions to understand their causal effects.
+</li>
+<br>
+<li>
+  <b>Mammo-SAE Framework.</b> 
+  Our framework projects patch-level CLIP features into a high-dimensional sparse latent space 
+  designed for human interpretability. We identify monosemantic latent neurons whose activations 
+  align with meaningful breast cancer features such as masses and calcifications by finding 
+  the most highly activated neurons. We then perform targeted interventions to test how 
+  these neurons affect label predictions by selectively activating or deactivating groups of neurons.
+</li>
+<br>
+<li>
+  <b>Extensive Evaluation.</b> 
+  We visualize spatial activations of top-activated latent neurons, showing that they frequently 
+  match clinically relevant regions of interest. Our experiments also reveal confounding factors—
+  such as background patterns—that influence model decisions. Furthermore, fine-tuning Mammo-CLIP 
+  increases the activation of clinically relevant latent neurons, thus explaining the reasons for performance gains.
+</li>
+
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color: #fdfdfd;">  <!-- #f3f3f3; f9fafb ededed  fdfdfd  -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">🧠 Mammo-SAE Method Overview</h2>
+        <div class="content has-text-justified">  <!--  style="font-size: 1.05em;" -->
+
+          <b>Step 1: Feature Extraction</b>
+          
+            Given an input image <strong>I</strong>, we extract local features from a pretrained Mammo-CLIP model at a specific layer <strong>l</strong>. Each spatial position <strong>j</strong> in the feature map yields a vector <strong>x<sub>l</sub><sup>j</sup> ∈ ℝ<sup>d</sup></strong>, where <strong>d</strong> is the feature dimension and <strong>N<sub>l</sub> = H<sub>l</sub> × W<sub>l</sub></strong> is the number of spatial locations.
+          
+
+          <p><strong>Step 2: Sparse Autoencoder Training</strong></p>
+          <p>
+            The extracted feature <strong>x<sub>l</sub><sup>j</sup></strong> is encoded using weight matrix <strong>W<sub>enc</sub> ∈ ℝ<sup>d×h</sup></strong>, passed through a ReLU nonlinearity, and decoded using <strong>W<sub>dec</sub> ∈ ℝ<sup>h×d</sup></strong>. The training objective combines reconstruction and sparsity:
+          </p>
+
+          <!--
+
+          <p style="text-align: center; font-family: monospace;">
+            L = ‖W<sub>dec</sub> · ReLU(W<sub>enc</sub> · x<sup>j</sup>) – x<sup>j</sup>‖<sup>2</sup><sub>2</sub> + λ‖ReLU(W<sub>enc</sub> · x<sup>j</sup>)‖<sub>1</sub>
+          </p>
+
+          -->
+
+          <p style="text-align:center;">
+            <img src="images/equation_1.png" alt="Equation 1" style="max-width:80%; height:auto;">
+          </p>
+
+          <p>
+            This encourages the autoencoder to reconstruct input features while activating only a small number of latent neurons, enabling interpretability.
+          </p>
+
+          <p><strong>Step 3: Identifying Concept-Neurons</strong></p>
+          <p>
+            After training, we compute the class-wise mean latent activation <strong>z̄<sup>(c)</sup> ∈ ℝ<sup>h</sup></strong> over all examples in class <strong>c ∈ {0, 1}</strong>:
+          </p>
+
+          <!-- <p style="text-align: center; font-family: monospace;">
+            z̄<sup>(c)</sup> = (1 / |D<sub>c</sub>| · N<sub>l</sub>) ∑<sub>x ∈ D<sub>c</sub></sub> ∑<sub>j=1</sub><sup>N<sub>l</sub></sup> ReLU(W<sub>enc</sub> · x<sup>j</sup>)
+          </p> -->
+
+          <p style="text-align:center;">
+            <img src="images/equation_2.png" alt="Equation 2" style="max-width:80%; height:auto;">
+          </p> 
+
+          <p>
+            Each latent neuron <strong>t</strong> is scored by its activation <strong>s<sub>t</sub><sup>(c)</sup> = z̄<sub>t</sub><sup>(c)</sup></strong>, and top-scoring neurons are considered concept-aligned.
+          </p>
+
+          <p><strong>Step 4: Visualization and Semantic Probing</strong></p>
+          <p>
+            We visualize input patches that strongly activate each latent neuron. This reveals whether the neuron focuses on meaningful clinical patterns (e.g., masses, calcifications) or irrelevant areas.
+          </p>
+
+          <p><strong>Step 5: Latent Interventions</strong></p>
+          <p>
+            We intervene on the latent activations <strong>z = ReLU(W<sub>enc</sub> · x<sup>j</sup>)</strong> by either retaining or suppressing specific neurons:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Top-k Activated:</strong> Keep only the top-k neuron activations:
+              <!-- <p style="font-family: monospace;">
+                z′ = z ⊙ m, &nbsp; where &nbsp; m<sub>i</sub> = 1 if i ∈ T<sub>k</sub><sup>(0)</sup> ∪ T<sub>k</sub><sup>(1)</sup>, else 0
+              </p> -->
+
+              <p style="text-align:center;">
+              <img src="images/equation_3.png" alt="Equation 3" style="max-width:80%; height:auto;">
+             </p>
+
+            </li>
+            <br>
+            <li>
+              <strong>Top-k Deactivated:</strong> Suppress the top-k neurons:
+              <!-- <p style="font-family: monospace;">
+                z′ = z ⊙ (1 – m)
+              </p> -->
+
+              <p style="text-align:center;">
+              <img src="images/equation_4.png" alt="Equation 4" style="max-width:80%; height:auto;">
+              </p>
+
+            </li>
+          </ul>
+
+          <p>
+            By comparing the model's outputs before and after intervention, we assess whether the top neurons carry meaningful information or reflect confounding artifacts.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">📊 Experiments</h2>
+        <div class="content has-text-justified" style="font-size: 1.05em;">
+
+          <p>
+            <em>Dataset.</em> We use the VinDr-Mammo dataset which contains approximately 20,000 full-field digital mammograms from 5,000 patients. 
+            The dataset includes expert annotations for breast-specific findings such as <em>mass</em> and 
+            <em>suspicious calcification</em>.
+          </p>
+
+          <p>
+            <em>SAE Training.</em> A single Sparse Autoencoder (SAE) is trained on patch-level features extracted 
+            from the fine-tuned Mammo-CLIP model using the Vision-SAEs library. Activations are taken from the final 
+            layer of the EfficientNet-B5 backbone trained on the <em>suspicious calcification</em> classification task.
+          </p>
+
+          <p>
+            To ensure consistency and reduce computational overhead, a shared SAE is used across all experiments 
+            rather than training separate SAEs per model. This design enforces a common latent space and allows 
+            direct comparison across settings.
+          </p>
+
+          <p>
+            <em>Hyperparameters.</em> The input feature dimension is <code>d = 2048</code>, with an expansion 
+            factor of 8, resulting in a latent dimension <code>h = 16,384</code>. The SAE is trained for 200 epochs 
+            with a learning rate of <code>3 × 10<sup>−4</sup></code>, sparsity penalty 
+            <code>λ = 3 × 10<sup>−5</sup></code>, and a batch size of <code>4096</code>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <!-- Subsection heading -->
+      <h3 class="title is-4" style="margin-bottom: 0.5em; text-align: left;">
+        Group Interventions on Latent Neurons
+      </h3>
+
+      <!-- Short paragraph -->
+      <p class="content has-text-justified" style="font-size: 1.05em; margin-bottom: 1em;">
+        We investigate the role of class-level latent neurons by selectively activating or deactivating
+        the most influential ones. This helps us understand how specific neuron groups contribute to
+        downstream predictions and model interpretability.
+      </p>
+
+      <!-- Figure -->
+      <figure style="text-align: center; margin: 0;">
+        <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+
+          <!-- First subfigure -->
+          <figure style="margin: 0; flex: 1;">
+            <img src="./images/media/topk_on_combined.png" 
+                 alt="Suspicious Calcification" 
+                 style="width: 100%; border: 1px solid #ccc; border-radius: 8px;">
+            <figcaption style="margin-top: 6px; font-size: 0.9em;">
+              (a) Top-k class-level latent neurons activated
+            </figcaption>
+          </figure>
+
+          <!-- Second subfigure -->
+          <figure style="margin: 0; flex: 1;">
+            <img src="./images/media/topk_off_combined.png" 
+                 alt="Benign Mass" 
+                 style="width: 100%; border: 1px solid #ccc; border-radius: 8px;">
+            <figcaption style="margin-top: 6px; font-size: 0.9em;">
+              (b) Top-k class-level latent neurons deactivated
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <!-- Main figure caption -->
+        <figcaption style="margin-top: 15px; font-size: 1em; text-align: left;">
+          <b>Figure:</b> Group interventions on class-level latent neurons. Left: Top-k activated intervention—only the top-k class-specific neurons are retained, and all others are zeroed out. Right: Top-k deactivated intervention—the top-k neurons are zeroed out while the rest remain unchanged. We observe that as few as 10 neurons can significantly affect downstream predictions, highlighting their relevance.
+        </figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <!-- Subsection heading -->
+      <h3 class="title is-4" style="margin-bottom: 0.5em; text-align: left;">
+        Spatial Alignment Between SAE Neurons and Breast Concept Regions
+      </h3>
+
+      <!-- Introductory sentence -->
+      <p class="content has-text-justified" style="font-size: 1.05em; margin-bottom: 1em;">
+        To quantitatively evaluate the spatial alignment between SAE latent activations
+        and annotated breast concept regions, we threshold each latent heatmap at the 
+        95<sup>th</sup> percentile and extract rectangular bounding boxes to approximate
+        predicted concept locations.
+      </p>
+
+      <!-- Caption above image -->
+      <p style="font-size: 1em; color: #555; margin-bottom: 10px; text-align: left;">
+        <b>Figure:</b> Mean Average Precision (mAP) for breast concept localization using the
+        top-10 class-level latent neuron activations for class <em>c</em> = 1 across different settings.
+      </p>
+
+      <!-- Image -->
+      <div style="text-align: center;">
+        <img src="./images/media/iou.png" 
+             alt="IoU overlap" 
+             style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <!-- Subsection heading -->
+      <h3 class="title is-4" style="margin-bottom: 0.5em; text-align: left;">
+        Visualization of Class-Level Latent Neurons
+      </h3>
+
+      <!-- Introductory sentence -->
+      <p class="content has-text-justified" style="font-size: 1.05em; margin-bottom: 1em;">
+        We visualize spatial activations of the most influential latent neurons in the fine-tuned  and pretrained 
+        models for mass and calcification concept predictions, and seek to understand if they align with clinically meaningful regions.
+        We show the ground-truth regions of these concept in the red boxes, however, this information is never used during the training time.
+
+      </p>
+
+      <!-- Caption above image -->
+      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
+        Visualization of class-level latent neurons for Finetuned (Suspicious Calcification) model
+      </h2>
+
+      <!-- Image -->
+      <div style="text-align: center;">
+        <img src="./images/media/latent_visualization_Suspicious_Calcification_finetuned_new.png" 
+             alt="Latent visualization of Suspicious Calcification" 
+             style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="text-align: center;">
+
+      <!-- Caption Above Image -->
+      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
+        Visualization of class-level latent neurons for Finetuned (Mass) model
+      </h2>
+
+      <!-- Image -->
+      <img src="./images/media/latent_visualization_Mass_finetuned_new.png" 
+           alt="Latent visualization of Suspicious Calcification" 
+           style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="text-align: center;">
+
+      <!-- Caption Above Image -->
+      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
+        Visualization of class-level latent neurons for Pretrained (Suspicious Calcification) model
+      </h2>
+
+      <!-- Image -->
+      <img src="./images/media/latent_visualization_Suspicious_Calcification_pretrained_new.png" 
+           alt="Latent visualization of Suspicious Calcification" 
+           style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="text-align: center;">
+
+      <!-- Caption Above Image -->
+      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
+        Visualization of class-level latent neurons for Pretrained (Mass) model
+      </h2>
+
+      <!-- Image -->
+      <img src="./images/media/latent_visualization_Mass_pretrained_new.png" 
+           alt="Latent visualization of Suspicious Calcification" 
+           style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <!-- Subsection heading -->
+      <h3 class="title is-4" style="margin-bottom: 0.5em; text-align: left;">
+        Latent Neuron Separation: Fine-Tuned vs. Pretrained
+      </h3>
+
+      <!-- Introductory sentence -->
+      <p class="content has-text-justified" style="font-size: 1.05em; margin-bottom: 1em;">
+        We observe that the separation between class-wise mean activations becomes 
+        significantly more pronounced in the fine-tuned model, suggesting that 
+        fine-tuning sharpens the latent space to better distinguish the presence 
+        of breast concepts.
+      </p>
+
+      <!-- Caption above image -->
+      <p style="font-size: 1em; color: #555; margin-bottom: 10px; text-align: left;">
+        <b>Figure:</b> Mean latent activation vectors for each class (<em>c</em> = 1 indicates 
+        the presence of the concept) in the pretrained model (left) and fine-tuned model 
+        (right) for the suspicious calcification concept.
+      </p>
+
+      <!-- Image -->
+      <div style="text-align: center;">
+        <img src="./images/media/latent_separation.png" 
+             alt="Latent neuron separation between pretrained and fine-tuned models" 
+             style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      <pre><code>
+  @InProceedings{Nakka_2025_MICCAI,
+    author    = {Nakka, Krishna Kanth},
+    title     = {Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders},
+    booktitle = {Proceedings of the  Deep Breast Workshop on AI and Imaging for Diagnostic and Treatment Challenges in Breast Care, MICCAI 2025},
+    month     = {September},
+    year      = {2025},
+}
+  </code></pre>
+    </div>
+  </section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Visitors</h2>
+        <div class="container" style="width: 100%; max-width: 400px; margin: 0 auto;">
+          <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=BTBEiW5jjy3YCVzq2Teq7jDJdbGqb6vxTksK1aPQw_0&cl=ffffff&w=a"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <section class="section" id="Acknowledgement">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgement</h2>
+      <p>
+        This website is adapted from <a
+        href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.  We are thankful to CDA, BIA for releasing the pretrained models.
+      </p>
+    </div>
+  </section>
+
+</body>
+
+
+</html>
+
+
