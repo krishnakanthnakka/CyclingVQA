@@ -141,6 +141,15 @@
             </span>
           </div>
 
+
+           <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=g_21RKoAAAAJ" target="_blank" style="color:#f68946; font-weight:bold;">Vedasri Nakka</a>
+            </span>
+          </div>
+
+
+
           <div class="is-size-5 publication-authors mb-4">
             <span class="author-block">Bavaria, Germany</span>
           </div>
@@ -181,73 +190,44 @@
   
 
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="text-align: center;">
-
-      <!-- Image -->
-      <img src="./images/mammosae.png" 
-           alt="Mammo-SAE Framework" 
-           style="max-width: 100%; border-radius: 8px; border: 0px solid #ccc;">
-
-      <!-- Caption Below Image -->
-      <p style="text-align: justify; margin-top: 12px; font-size: 0.95em; max-width: 900px; margin-left: auto; margin-right: auto;">
-        <strong>Mammo-SAE Framework.</strong> The SAE is first trained on patch-level CLIP features 
-        <em><strong>x<sub>j</sub> ∈ ℝ<sup>d</sup></strong></em> at any given layer, projecting them into a high-dimensional, 
-        interpretable sparse latent space <em><strong>z ∈ ℝ<sup>h</sup></strong></em>, and decoding them back for reconstruction. 
-        Once trained, the SAE is used to analyze which latent neurons are activated and what semantic information they encode. 
-        We also perform targeted interventions in the latent neuron space to assess their influence on downstream label prediction. 
-        We observe the learned latents capture diverse regions such as <em>nipple regions, mass regions</em>, and background areas. 
-        Red boxes indicate ground-truth mass localization.
-      </p>
-
-    </div>
-  </div>
-</section>
 
 
 
 
-<section class="section" style="background-color: #efeff081;"> <!-- efeff081 #e3f2fd; --> 
-  <div class="container is-max-desktop">
-    <!-- Highlights -->
+<section class="section" style="background-color: #efeff081;"> <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">🔥 Highlights</h2>
         <div class="content has-text-justified">
           <ol type="1">
             <li>
-  <b>Mammo-SAE Introduction.</b> 
-  We propose <code>Mammo-SAE</code>, a sparse autoencoder trained on visual features from Mammo-CLIP, 
-  a vision–language model pretrained on mammogram image–report pairs. 
-  Mammo-SAE aims to enhance interpretability in breast imaging by learning latent neurons 
-  that are human-interpretable. It first identifies highly activated latent neurons 
-  and then conducts interventions to understand their causal effects.
-</li>
-<br>
-<li>
-  <b>Mammo-SAE Framework.</b> 
-  Our framework projects patch-level CLIP features into a high-dimensional sparse latent space 
-  designed for human interpretability. We identify monosemantic latent neurons whose activations 
-  align with meaningful breast cancer features such as masses and calcifications by finding 
-  the most highly activated neurons. We then perform targeted interventions to test how 
-  these neurons affect label predictions by selectively activating or deactivating groups of neurons.
-</li>
-<br>
-<li>
-  <b>Extensive Evaluation.</b> 
-  We visualize spatial activations of top-activated latent neurons, showing that they frequently 
-  match clinically relevant regions of interest. Our experiments also reveal confounding factors—
-  such as background patterns—that influence model decisions. Furthermore, fine-tuning Mammo-CLIP 
-  increases the activation of clinically relevant latent neurons, thus explaining the reasons for performance gains.
-</li>
-
+              <b>Cyclist-Centric Dataset.</b> 
+              We introduce a new dataset comprising 2,053 multiple-choice visual question–answer pairs derived from 705 real-world cyclist egocentric images. This resource is designed to bridge the gap in ego-perspective urban cycling data.
+            </li>
+            <br>
+            <li>
+              <b>Specialized Spatial Tasks.</b> 
+              We define eight specific evaluation tasks that probe cyclist-centric spatial perception, traffic rule compliance, and navigation-relevant reasoning within complex urban environments, moving beyond general object detection.
+            </li>
+            <br>
+            <li>
+              <b>Benchmarking VLMs.</b> 
+              We conduct a comprehensive evaluation of state-of-the-art Vision-Language Models (VLMs), including general-purpose, spatially enhanced, and Autonomous Driving (AD)-focused models, revealing significant room for improvement in cyclist-specific reasoning.
+            </li>
+            <br>
+            <li>
+              <b>Systematic Failure Analysis.</b> 
+              We perform a granular analysis of model failure modes, categorizing recurring error types to provide a clear technical roadmap for the development of future cyclist-assistive intelligent systems.
+            </li>
           </ol>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 <section class="section" style="background-color: #fdfdfd;">  <!-- #f3f3f3; f9fafb ededed  fdfdfd  -->
   <div class="container is-max-desktop">
