@@ -2,7 +2,7 @@
 
 
 
-<h2 align="center">  From Steering to Pedalling: Do Autonomous Driving VLMs Generalize to Cyclist-Assistive Spatial Perception and Planning? ]</h2>
+<h2 align="center">  From Steering to Pedalling: Do Autonomous Driving VLMs Generalize to Cyclist-Assistive Spatial Perception and Planning? </h2>
 
 ![](https://i.imgur.com/waxVImv.png)
 
@@ -24,10 +24,25 @@
 - ✅ **Feb11-2025**: Release paper
 
 
+## Highlights
+
+- **Cyclist-Centric Benchmark**  
+  We introduce **CyclingVQA**, a cyclist-centric benchmark comprising 2,009 multiple-choice visual question–answer pairs from 695 real-world egocentric images.
+
+- **Specialized Spatial Evaluation**  
+  We define eight evaluation tasks probing cyclist-centric spatial perception, traffic rule compliance, and navigation-relevant reasoning in complex urban environments.
+
+- **Comprehensive VLM Evaluation**  
+  We evaluate state-of-the-art Vision–Language Models (VLMs), including general-purpose, spatially enhanced, and autonomous-driving-focused models, highlighting significant limitations in cyclist-centric reasoning.
+
+- **Systematic Failure Analysis**  
+  We conduct a comprehensive analysis of common failure modes to inform the design of future cyclist-assistive intelligent systems.
+
+
 
 ## ToDo
 
-- [ ] Release dataset
+- [ ] Release dataset on the [HuggingFace](https://huggingface.co/datasets/KKNakka/CyclingVQA)
 - [ ] Release evaluation code
 
 ## 📝 Citation
