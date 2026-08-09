@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1efe8">
+  <script>
+    try {
+      var saved = localStorage.getItem("cyclingvqa-theme");
+      var system = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = saved || system;
+    } catch (e) {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
+  <title>CyclingVQA — Trajectories</title>
+  <meta name="description" content="Example model trajectories on the CyclingVQA benchmark, ten per task.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Space+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="./static/css/index.css?v=2">
+  <link rel="stylesheet" href="./static/css/trajectories.css?v=1">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="subpage-bar">
+    <a class="subpage-back" href="./index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      CyclingVQA
+    </a>
+    <div class="subpage-tools">
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="traj-header">
+      <div class="topography" aria-hidden="true"></div>
+      <div class="page-shell traj-header-inner">
+        <div class="section-header">
+          <div class="section-header-rail">
+            <span class="section-index">↳</span>
+            <span class="section-eyebrow">Trajectories</span>
+            <span class="section-rule" aria-hidden="true"></span>
+          </div>
+          <div class="section-header-body">
+            <h2>What the model actually said.</h2>
+            <p>Ten example trajectories per task, straight from the benchmark: the exact stimulus, the answer choices, the ground truth, and the model's full response.</p>
+          </div>
+        </div>
+
+        <dl class="traj-meta">
+          <div><dt>Model</dt><dd>gemini-2.5-flash</dd></div>
+          <div><dt>Tasks</dt><dd>8</dd></div>
+          <div><dt>Examples shown</dt><dd>10 per task</dd></div>
+          <div><dt>Ordering</dt><dd>Dataset order</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="page-shell">
+      <nav class="task-tabs" id="task-tabs" aria-label="Tasks"></nav>
+      <div id="task-panels"></div>
+    </div>
+  </main>
+
+  <div class="figure-lightbox-backdrop">
+    <div class="figure-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged example">
+      <header>
+        <span class="figure-lightbox-label">Example</span>
+        <button class="figure-lightbox-close" type="button" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </header>
+      <div class="figure-lightbox-stage"><img src="" alt=""></div>
+      <p class="figure-lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="./static/js/trajectories.js?v=1"></script>
+</body>
+</html>
