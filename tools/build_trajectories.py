@@ -10,9 +10,33 @@ for that question (predicted_choice letter + full reasoning "cot").
 Run from anywhere; paths are resolved relative to this file.
 """
 import json
+import re
 from pathlib import Path
 
 from PIL import Image
+
+LETTER_PREFIX_RE = re.compile(r"^[A-Za-z][.):,-]\s*")
+
+
+def normalize(s: str) -> str:
+    return " ".join(s.lower().split())
+
+
+def extract_reasoning(mp: dict, choice_text: str) -> str:
+    """Prefer the explicit thinking trace ('cot'); most Instruct-type models
+    leave it blank and instead fold a short justification into 'answer' right
+    after the letter, e.g. "B, because the sign …" — use that as a fallback,
+    but drop it if all that's left after the letter is just the choice text
+    restated (no actual added reasoning)."""
+    cot = (mp.get("cot") or "").strip()
+    if len(cot) > 1:
+        return cot
+
+    answer = (mp.get("answer") or "").strip()
+    stripped = LETTER_PREFIX_RE.sub("", answer, count=1).strip()
+    if not stripped or normalize(stripped) == normalize(choice_text):
+        return ""
+    return stripped
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
 RESULTS_DIR = REPO_ROOT / "results"
@@ -144,7 +168,7 @@ def main():
                 pred_letter = mp.get("predicted_choice") or mp.get("answer")
                 pred_idx = letter_to_index(pred_letter)
                 pred_text = choices[pred_idx] if pred_idx is not None and pred_idx < len(choices) else pred_letter
-                reasoning = (mp.get("cot") or "").strip()
+                reasoning = extract_reasoning(mp, pred_text or "")
                 if len(reasoning) > MAX_REASONING_CHARS:
                     reasoning = reasoning[:MAX_REASONING_CHARS].rsplit(" ", 1)[0] + "…"
                 predictions[model_key] = {

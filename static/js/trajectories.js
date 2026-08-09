@@ -143,9 +143,10 @@
     var statusClass = !hasChoice ? "is-empty" : prediction.correct ? "is-correct" : "is-wrong";
     var statusIcon = !hasChoice ? "" : prediction.correct ? CHECK_SVG : CROSS_SVG;
     var answer = hasChoice ? prediction.choice : "No answer parsed";
-    var reasoning = prediction.reasoning && prediction.reasoning.length
-      ? '<div class="traj-model-row-reasoning">' + escapeHtml(prediction.reasoning) + "</div>"
-      : "";
+    var reasoningText = prediction.reasoning && prediction.reasoning.length
+      ? escapeHtml(prediction.reasoning)
+      : "<em>No additional reasoning captured beyond the selected choice.</em>";
+    var reasoning = '<div class="traj-model-row-reasoning">' + reasoningText + "</div>";
 
     return (
       '<details class="traj-model-row' + (state.selected.has(modelKey) ? "" : " is-hidden") + '" data-model="' + modelKey + '">' +
