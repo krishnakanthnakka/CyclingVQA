@@ -370,7 +370,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 1",
-        "predicted_choice": "A",
+        "predicted_choice": "Image 1",
         "predicted_answer": "A. Image 1\n\n**Reasoning:**\n1.  **Blue Bicycle Sign:** Both images feature a blue circular sign with a white bicycle. In Image 1, this sign is visible in the distance on the right side of the main road. In Image 2, the same sign is much closer and more prominent, located right next to a dedicated bike path.\n2.  **Bike Path Development:** In Image 1, the foreground shows a bike lane marked with dashed lines on the asphalt (see bottom-left crop for Image 1). In Image 2, there is a distinct, separated bike path with a bicycle symbol and an arrow painted on the ground, indicating the direction of travel (see bottom-right crop for Image 2).\n3.  **Progression:** As a cyclist progresses along the road, they would move from a point where the blue sign is distant (as in Image 1) towards the sign and a more developed, dedicated bike path (as in Image 2). Therefore, Image 1 represents the earlier moment in the cyclist's journey.",
         "correct": true
       },
@@ -385,7 +385,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 1",
-        "predicted_choice": "B",
+        "predicted_choice": "Image 2",
         "predicted_answer": "B. Image 2. In Image 2, the cyclist is on a path alongside a wooden fence with \"Circus Roncalli\" posters on the left and a blue bicycle sign with arrows on the right. This path leads to the intersection shown in Image 1. In Image 1, the cyclist is at the red bike crossing, where the wooden fence (and thus the path from Image 2) is now to their left and slightly behind, and the blue bicycle sign (seen prominently in Image 2) is now across the intersection, further ahead on the right, marking the path's continuation. Therefore, Image 2 represents an earlier viewpoint as the cyclist approaches the intersection.",
         "correct": false
       },
@@ -400,7 +400,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 2",
-        "predicted_choice": "B",
+        "predicted_choice": "Image 2",
         "predicted_answer": "B. Image 2 shows the cyclist further back on the path, approaching the intersection and the features (signs, black car, light-colored wall) that are much closer in Image 1.",
         "correct": true
       },
@@ -415,7 +415,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 2",
-        "predicted_choice": "B",
+        "predicted_choice": "Image 2",
         "predicted_answer": "B. Image 2, because the key landmarks (like the \"RADIOLOGIE\" sign and the \"No Bicycles\" sign) are visible in the far distance in Image 2, while they appear much closer in Image 1, indicating that Image 2 represents an earlier, more distant viewpoint.",
         "correct": true
       },
@@ -430,7 +430,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 1",
-        "predicted_choice": "B",
+        "predicted_choice": "Image 2",
         "predicted_answer": "B. Image 2 represents an earlier viewpoint. In Image 2, the cyclist is on a path approaching an area. The signs visible on the right side of the path in Image 2 (a red \"no bicycles\" sign and a blue \"shared path for pedestrians and cyclists\" sign) are the same signs seen further along the road near the Penny store in Image 1. Image 1 shows the cyclist at an intersection with a red bike lane, a traffic light, and the \"Max-Lebsche-Platz\" street sign, indicating a more advanced position. Therefore, riding forward, a cyclist would encounter the scene in Image 2 before arriving at the intersection shown in Image 1.",
         "correct": false
       },
@@ -445,7 +445,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 2",
-        "predicted_choice": "A",
+        "predicted_choice": "Image 1",
         "predicted_answer": "A. Image 1\nThe blue bicycle sign is closer to the camera in Image 1 than in Image 2. Since the images were captured sequentially during forward travel, the cyclist must have moved past the sign, causing it to appear further away in the subsequent image. Therefore, Image 1 was taken first.",
         "correct": false
       },
@@ -460,7 +460,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 2",
-        "predicted_choice": "A",
+        "predicted_choice": "Image 1",
         "predicted_answer": "A. Image 1\n\nReasoning: In Image 2, on the far left side of the road in the distance, you can clearly see the same sign pole with the red \"No Cycling\" sign and the blue \"Shared Path\" sign that are prominently in the foreground of Image 1. This indicates that the cyclist has moved past the location shown in Image 1 and is now further along the path at the intersection depicted in Image 2.",
         "correct": false
       },
@@ -475,7 +475,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 2",
-        "predicted_choice": "A",
+        "predicted_choice": "Image 1",
         "predicted_answer": "A. Image 1\nIn Image 1, the bus stop and the bicycle sign are in the foreground on the right side of the road. In Image 2, the same bus stop and bicycle sign are visible further in the background, with an intersection and traffic lights now in the foreground. This indicates that the cyclist has progressed past the initial point shown in Image 1 to reach the location depicted in Image 2. Therefore, Image 1 corresponds to the earlier moment.",
         "correct": false
       },
@@ -490,7 +490,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 2",
-        "predicted_choice": "A",
+        "predicted_choice": "Image 1",
         "predicted_answer": "A. Image 1\nIn Image 1, the street sign \"Am Wiesenbach\" is prominent on the right side of the road. In Image 2, an Esso gas station is prominent on the right, and the \"Am Wiesenbach\" sign is now further in the background and to the left, indicating that the cyclist has moved past the intersection where \"Am Wiesenbach\" begins.",
         "correct": false
       },
@@ -505,7 +505,7 @@
           "Image 2"
         ],
         "gt_answer": "Image 1",
-        "predicted_choice": "A",
+        "predicted_choice": "Image 1",
         "predicted_answer": "A. Image 1\n\nIn Image 1, a pole with a red triangular sign and a yellow diamond-shaped sign is visible in the immediate foreground on the right. In Image 2, this pole and signs are no longer visible, indicating the cyclist has moved past them. Also, the green truck on the left side of the road appears further away in Image 1 and closer to the camera in Image 2, consistent with forward motion.",
         "correct": true
       }
