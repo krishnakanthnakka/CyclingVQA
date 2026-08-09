@@ -1,0 +1,225 @@
+{
+  "models": [
+    {
+      "key": "gemini-2.5-flash",
+      "display": "Gemini-2.5-Flash",
+      "group": "proprietary",
+      "rank": 1,
+      "default": true
+    },
+    {
+      "key": "gpt-5.1",
+      "display": "GPT-5.1",
+      "group": "proprietary",
+      "rank": 2,
+      "default": true
+    },
+    {
+      "key": "Qwen3-VL-8B-Instruct",
+      "display": "Qwen3-VL (8B)",
+      "group": "generalist",
+      "rank": 3,
+      "default": true
+    },
+    {
+      "key": "Ovis2.5-9B",
+      "display": "Ovis2.5-9B",
+      "group": "generalist",
+      "rank": 4,
+      "default": true
+    },
+    {
+      "key": "Perception-LM-8B",
+      "display": "PerceptionLM (8B)",
+      "group": "spatial",
+      "rank": 5,
+      "default": true
+    },
+    {
+      "key": "InternVL3_5-8B",
+      "display": "InternVL3.5-8B",
+      "group": "generalist",
+      "rank": 6,
+      "default": false
+    },
+    {
+      "key": "Ovis2.5-2B",
+      "display": "Ovis2.5-2B",
+      "group": "generalist",
+      "rank": 7,
+      "default": false
+    },
+    {
+      "key": "Qwen3-VL-2B-Instruct",
+      "display": "Qwen3-VL (2B)",
+      "group": "generalist",
+      "rank": 8,
+      "default": false
+    },
+    {
+      "key": "Cosmos-Reason2-8B",
+      "display": "Cosmos-Reason2",
+      "group": "driving",
+      "rank": 9,
+      "default": true
+    },
+    {
+      "key": "SpatialThinker-7B",
+      "display": "SpatialThinker",
+      "group": "spatial",
+      "rank": 11,
+      "default": false
+    },
+    {
+      "key": "Eagle2.5-8B",
+      "display": "Eagle2.5-8B",
+      "group": "generalist",
+      "rank": 12,
+      "default": false
+    },
+    {
+      "key": "SenseNova-SI-1.1-InternVL3-8B",
+      "display": "SenseNova",
+      "group": "spatial",
+      "rank": 13,
+      "default": false
+    },
+    {
+      "key": "Phi-4-multimodal-instruct",
+      "display": "Phi-4",
+      "group": "generalist",
+      "rank": 14,
+      "default": false
+    },
+    {
+      "key": "InternVL3-8B",
+      "display": "InternVL3",
+      "group": "generalist",
+      "rank": 15,
+      "default": false
+    },
+    {
+      "key": "Perception-LM-3B",
+      "display": "PerceptionLM (3B)",
+      "group": "spatial",
+      "rank": 16,
+      "default": false
+    },
+    {
+      "key": "InternVL3_5-2B",
+      "display": "InternVL3.5-2B",
+      "group": "generalist",
+      "rank": 17,
+      "default": false
+    },
+    {
+      "key": "Qwen2.5-VL-7B-Instruct",
+      "display": "Qwen2.5-VL",
+      "group": "generalist",
+      "rank": 18,
+      "default": false
+    },
+    {
+      "key": "Qwen2_5vl-7b-fm-tuned",
+      "display": "FoundationMotion",
+      "group": "generalist",
+      "rank": 19,
+      "default": false
+    },
+    {
+      "key": "DriveLMMo1",
+      "display": "DriveLMMo1",
+      "group": "driving",
+      "rank": 20,
+      "default": false
+    },
+    {
+      "key": "VST-7B-RL",
+      "display": "VST",
+      "group": "spatial",
+      "rank": 21,
+      "default": false
+    },
+    {
+      "key": "Molmo2-8B",
+      "display": "Molmo2-8B",
+      "group": "generalist",
+      "rank": 22,
+      "default": false
+    },
+    {
+      "key": "Cosmos-Reason1-7B",
+      "display": "Cosmos-Reason1",
+      "group": "driving",
+      "rank": 23,
+      "default": false
+    },
+    {
+      "key": "llava-onevision-qwen2-7b-si-hf",
+      "display": "LLaVA-OneVision",
+      "group": "generalist",
+      "rank": 24,
+      "default": false
+    },
+    {
+      "key": "ReCogDrive-VLM-DriveLM",
+      "display": "ReCogDrive",
+      "group": "driving",
+      "rank": 25,
+      "default": false
+    },
+    {
+      "key": "DriveMM",
+      "display": "DriveMM",
+      "group": "driving",
+      "rank": 26,
+      "default": false
+    },
+    {
+      "key": "SpatialReasoner",
+      "display": "SpatialReasoner",
+      "group": "spatial",
+      "rank": 27,
+      "default": false
+    },
+    {
+      "key": "llama3-llava-next-8b-hf",
+      "display": "LLaVA-Next",
+      "group": "generalist",
+      "rank": 28,
+      "default": false
+    },
+    {
+      "key": "llava-v1.6-mistral-7b-hf",
+      "display": "LLaVA-1.6",
+      "group": "generalist",
+      "rank": 29,
+      "default": false
+    },
+    {
+      "key": "dolphins",
+      "display": "Dolphins",
+      "group": "driving",
+      "rank": 30,
+      "default": false
+    }
+  ],
+  "groups": [
+    {
+      "key": "proprietary",
+      "label": "Proprietary VLMs"
+    },
+    {
+      "key": "generalist",
+      "label": "Generalist VLMs"
+    },
+    {
+      "key": "spatial",
+      "label": "Spatial-Aware VLMs"
+    },
+    {
+      "key": "driving",
+      "label": "Driving-Centric VLMs"
+    }
+  ]
+}
