@@ -1,0 +1,1410 @@
+[
+  {
+    "code": "SU",
+    "label": "Spatial Understanding",
+    "slug": "spatial_scene_understanding",
+    "examples": [
+      {
+        "index": 3,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/3.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). Describe the spatial relationship between the object in <region1> and the object in <region2>.",
+        "choices": [
+          "The object in [region2] is positioned to the left of the object in [region1].",
+          "The object in [region1] is positioned to the left of the object in [region2]."
+        ],
+        "gt_answer": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_choice": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_answer": "B. The object in [region1] is positioned to the left of the object in [region2].",
+        "correct": true
+      },
+      {
+        "index": 5,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/5.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). Describe the spatial relationship between the object in <region1> and the object in <region2>.",
+        "choices": [
+          "The object in [region1] is positioned to the left of the object in [region2].",
+          "The object in [region2] is positioned to the left of the object in [region1]."
+        ],
+        "gt_answer": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_choice": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_answer": "A. The object in [region1] is positioned to the left of the object in [region2].",
+        "correct": true
+      },
+      {
+        "index": 7,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/7.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). Describe the spatial relationship between the object in <region1> and the object in <region2>.",
+        "choices": [
+          "The object in [region2] is positioned to the left of the object in [region1].",
+          "The object in [region1] is positioned to the left of the object in [region2]."
+        ],
+        "gt_answer": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_choice": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_answer": "B. The object in [region1] is positioned to the left of the object in [region2].",
+        "correct": true
+      },
+      {
+        "index": 8,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/8.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). Describe the spatial relationship between the object in <region1> and the object in <region2>.",
+        "choices": [
+          "The object in [region1] is closer to the cyclist than the object in [region2].",
+          "The object in [region2] is closer to the cyclist than the object in [region1]."
+        ],
+        "gt_answer": "The object in [region2] is closer to the cyclist than the object in [region1].",
+        "predicted_choice": "The object in [region2] is closer to the cyclist than the object in [region1].",
+        "predicted_answer": "B. The object in [region2] is closer to the cyclist than the object in [region1].",
+        "correct": true
+      },
+      {
+        "index": 10,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/10.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). Describe the spatial relationship between the object in <region1> and the object in <region2>.",
+        "choices": [
+          "The object in [region1] is closer to the cyclist than the object in [region2].",
+          "The object in [region2] is closer to the cyclist than the object in [region1]."
+        ],
+        "gt_answer": "The object in [region1] is closer to the cyclist than the object in [region2].",
+        "predicted_choice": "The object in [region2] is closer to the cyclist than the object in [region1].",
+        "predicted_answer": "B. The object in [region2] is closer to the cyclist than the object in [region1] because region 2 is located at the immediate intersection near the bus stop, while region 1 is further down the road, past the main intersection.",
+        "correct": false
+      },
+      {
+        "index": 21,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/21.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). What is the relationship between the object in <region1> and the object in <region2>?",
+        "choices": [
+          "The object in [region2] is positioned to the left of the object in [region1].",
+          "The object in [region1] is positioned to the left of the object in [region2]."
+        ],
+        "gt_answer": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_choice": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_answer": "B. The object in [region1] is positioned to the left of the object in [region2].",
+        "correct": true
+      },
+      {
+        "index": 25,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/25.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). Describe the spatial relationship between the object in <region1> and the object in <region2>.",
+        "choices": [
+          "The object in [region1] is positioned to the left of the object in [region2].",
+          "The object in [region2] is positioned to the left of the object in [region1]."
+        ],
+        "gt_answer": "The object in [region2] is positioned to the left of the object in [region1].",
+        "predicted_choice": "The object in [region2] is positioned to the left of the object in [region1].",
+        "predicted_answer": "B. The object in [region2] is positioned to the left of the object in [region1] from the cyclist's perspective.",
+        "correct": true
+      },
+      {
+        "index": 28,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/28.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). What is the relationship between the object in <region1> and the object in <region2>?",
+        "choices": [
+          "The object in [region1] is closer to the cyclist than the object in [region2].",
+          "The object in [region2] is closer to the cyclist than the object in [region1]."
+        ],
+        "gt_answer": "The object in [region2] is closer to the cyclist than the object in [region1].",
+        "predicted_choice": "The object in [region2] is closer to the cyclist than the object in [region1].",
+        "predicted_answer": "B. The object in [region2] appears larger and is positioned more in the foreground on the right side, while the object in [region1] is smaller and further down the road on the left side, partially obscured by another vehicle.",
+        "correct": true
+      },
+      {
+        "index": 31,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/31.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). Describe the spatial relationship between the object in <region1> and the object in <region2>.",
+        "choices": [
+          "The object in [region1] is positioned to the left of the object in [region2].",
+          "The object in [region2] is positioned to the left of the object in [region1]."
+        ],
+        "gt_answer": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_choice": "The object in [region1] is positioned to the left of the object in [region2].",
+        "predicted_answer": "A. The object in [region1] is positioned to the left of the object in [region2].",
+        "correct": true
+      },
+      {
+        "index": 32,
+        "images": [
+          "static/trajectories/spatial_scene_understanding/32.jpg"
+        ],
+        "question": "In the image, captured from the cyclist\u2019s perspective, focus on the regions marked as <region1> (highlighted by a green bounding box) and <region2> (highlighted by a red bounding box). What is the relationship between the object in <region1> and the object in <region2>?",
+        "choices": [
+          "The object in [region1] is closer to the cyclist than the object in [region2].",
+          "The object in [region2] is closer to the cyclist than the object in [region1]."
+        ],
+        "gt_answer": "The object in [region1] is closer to the cyclist than the object in [region2].",
+        "predicted_choice": "The object in [region1] is closer to the cyclist than the object in [region2].",
+        "predicted_answer": "A. The object in [region1] is closer to the cyclist than the object in [region2].",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "code": "TSG",
+    "label": "Traffic Sign Grounding",
+    "slug": "traffic_sign_localization",
+    "examples": [
+      {
+        "index": 0,
+        "images": [
+          "static/trajectories/traffic_sign_localization/0.jpg"
+        ],
+        "question": "From the cyclist's viewpoint, among the marked regions <1>, <2>, <3>, <4>, <5>, <6>, <7>, which region correctly points to a traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>",
+          "<7>"
+        ],
+        "gt_answer": "<3>",
+        "predicted_choice": "<3>",
+        "predicted_answer": "C. Region <3> correctly points to a speed limit sign (30 km/h) and a pedestrian warning sign, which are both types of traffic signs.",
+        "correct": true
+      },
+      {
+        "index": 1,
+        "images": [
+          "static/trajectories/traffic_sign_localization/1.jpg"
+        ],
+        "question": "From the cyclist's viewpoint, among the marked regions <1>, <2>, <3>, <4>, <5>, <6>, which region correctly points to a traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<3>",
+        "predicted_choice": "<3>",
+        "predicted_answer": "C. Region <3> clearly contains two traffic signs: a \"no cycling\" sign and a \"shared path for pedestrians and cyclists\" sign.",
+        "correct": true
+      },
+      {
+        "index": 2,
+        "images": [
+          "static/trajectories/traffic_sign_localization/2.jpg"
+        ],
+        "question": "From the cyclist's perspective, several regions are marked in the image as <1>, <2>, <3>, <4>, <5>, <6>. Which region actually contains a traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<4>",
+        "predicted_choice": "<4>",
+        "predicted_answer": "D. Region <4> clearly shows a blue circular sign with a white bicycle symbol, which is a traffic sign indicating a mandatory bicycle path.",
+        "correct": true
+      },
+      {
+        "index": 3,
+        "images": [
+          "static/trajectories/traffic_sign_localization/3.jpg"
+        ],
+        "question": "From the cyclist's viewpoint, among the marked regions <1>, <2>, <3>, <4>, <5>, <6>, which region correctly points to a traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<6>",
+        "predicted_choice": "<6>",
+        "predicted_answer": "F. Region <6> clearly points to a blue circular traffic sign indicating a shared path for pedestrians and cyclists.",
+        "correct": true
+      },
+      {
+        "index": 4,
+        "images": [
+          "static/trajectories/traffic_sign_localization/4.jpg"
+        ],
+        "question": "Looking at the highlighted regions <1>, <2>, <3>, <4>, <5>, <6>, which one contains the traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<1>",
+        "predicted_choice": "<1>",
+        "predicted_answer": "A. Region <1> contains two circular traffic signs: one indicating \"no cycling\" and another indicating a shared pedestrian and bicycle path.",
+        "correct": true
+      },
+      {
+        "index": 5,
+        "images": [
+          "static/trajectories/traffic_sign_localization/5.jpg"
+        ],
+        "question": "From the cyclist's viewpoint, among the marked regions <1>, <2>, <3>, <4>, <5>, <6>, which region correctly points to a traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<4>",
+        "predicted_choice": "<4>",
+        "predicted_answer": "D. Region <4> clearly shows a blue circular traffic sign with a bicycle symbol and an arrow, indicating a mandatory cycle path or shared path.",
+        "correct": true
+      },
+      {
+        "index": 6,
+        "images": [
+          "static/trajectories/traffic_sign_localization/6.jpg"
+        ],
+        "question": "Looking at the highlighted regions <1>, <2>, <3>, <4>, <5>, <6>, which one contains the traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<5>",
+        "predicted_choice": "<5>",
+        "predicted_answer": "E. Region <5> clearly shows a blue circular sign with a bicycle symbol and another sign with arrows, which are both traffic signs.",
+        "correct": true
+      },
+      {
+        "index": 7,
+        "images": [
+          "static/trajectories/traffic_sign_localization/7.jpg"
+        ],
+        "question": "In this image, the regions <1>, <2>, <3>, <4>, <5>, <6> are highlighted. Which highlighted region corresponds to a traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<2>",
+        "predicted_choice": "<2>",
+        "predicted_answer": "B. <2> is a blue rectangular sign with white pictograms of a pedestrian and a bicycle, indicating a shared path. This is a recognized traffic sign. Region <1> is also a traffic sign (a blue circular mandatory sign for a shared path), but since only one option can be chosen, <2> is an equally valid and clearly depicted example. Regions <3>, <4>, <5>, and <6> are not traffic signs.",
+        "correct": true
+      },
+      {
+        "index": 8,
+        "images": [
+          "static/trajectories/traffic_sign_localization/8.jpg"
+        ],
+        "question": "In this image, the regions <1>, <2>, <3>, <4>, <5>, <6> are highlighted. Which highlighted region corresponds to a traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<5>",
+        "predicted_choice": "<5>",
+        "predicted_answer": "E. Region <5> highlights a blue circular sign with a bicycle and pedestrian symbol, which is a traffic sign indicating a shared path for cyclists and pedestrians.",
+        "correct": true
+      },
+      {
+        "index": 9,
+        "images": [
+          "static/trajectories/traffic_sign_localization/9.jpg"
+        ],
+        "question": "In this image, the regions <1>, <2>, <3>, <4>, <5>, <6> are highlighted. Which highlighted region corresponds to a traffic sign?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<1>",
+        "predicted_choice": "<1>",
+        "predicted_answer": "A. Region <1> displays a blue circular sign with a white bicycle symbol, which is a standard traffic sign indicating a mandatory cycle path.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "code": "TO",
+    "label": "Temporal Ordering",
+    "slug": "temporal_ordering",
+    "examples": [
+      {
+        "index": 0,
+        "images": [
+          "static/trajectories/temporal_ordering/0.jpg"
+        ],
+        "question": "As the cyclist progressed along the road, which of these two views corresponds to the earlier moment?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 1",
+        "predicted_choice": "A",
+        "predicted_answer": "A. Image 1\n\n**Reasoning:**\n1.  **Blue Bicycle Sign:** Both images feature a blue circular sign with a white bicycle. In Image 1, this sign is visible in the distance on the right side of the main road. In Image 2, the same sign is much closer and more prominent, located right next to a dedicated bike path.\n2.  **Bike Path Development:** In Image 1, the foreground shows a bike lane marked with dashed lines on the asphalt (see bottom-left crop for Image 1). In Image 2, there is a distinct, separated bike path with a bicycle symbol and an arrow painted on the ground, indicating the direction of travel (see bottom-right crop for Image 2).\n3.  **Progression:** As a cyclist progresses along the road, they would move from a point where the blue sign is distant (as in Image 1) towards the sign and a more developed, dedicated bike path (as in Image 2). Therefore, Image 1 represents the earlier moment in the cyclist's journey.",
+        "correct": true
+      },
+      {
+        "index": 1,
+        "images": [
+          "static/trajectories/temporal_ordering/1.jpg"
+        ],
+        "question": "From the cyclist\u2019s perspective while riding forward, which of the two images represents an earlier viewpoint?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 1",
+        "predicted_choice": "B",
+        "predicted_answer": "B. Image 2. In Image 2, the cyclist is on a path alongside a wooden fence with \"Circus Roncalli\" posters on the left and a blue bicycle sign with arrows on the right. This path leads to the intersection shown in Image 1. In Image 1, the cyclist is at the red bike crossing, where the wooden fence (and thus the path from Image 2) is now to their left and slightly behind, and the blue bicycle sign (seen prominently in Image 2) is now across the intersection, further ahead on the right, marking the path's continuation. Therefore, Image 2 represents an earlier viewpoint as the cyclist approaches the intersection.",
+        "correct": false
+      },
+      {
+        "index": 2,
+        "images": [
+          "static/trajectories/temporal_ordering/2.jpg"
+        ],
+        "question": "From the cyclist\u2019s perspective while riding forward, which of the two images represents an earlier viewpoint?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 2",
+        "predicted_choice": "B",
+        "predicted_answer": "B. Image 2 shows the cyclist further back on the path, approaching the intersection and the features (signs, black car, light-colored wall) that are much closer in Image 1.",
+        "correct": true
+      },
+      {
+        "index": 3,
+        "images": [
+          "static/trajectories/temporal_ordering/3.jpg"
+        ],
+        "question": "From the cyclist\u2019s perspective while riding forward, which of the two images represents an earlier viewpoint?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 2",
+        "predicted_choice": "B",
+        "predicted_answer": "B. Image 2, because the key landmarks (like the \"RADIOLOGIE\" sign and the \"No Bicycles\" sign) are visible in the far distance in Image 2, while they appear much closer in Image 1, indicating that Image 2 represents an earlier, more distant viewpoint.",
+        "correct": true
+      },
+      {
+        "index": 4,
+        "images": [
+          "static/trajectories/temporal_ordering/4.jpg"
+        ],
+        "question": "From the cyclist\u2019s perspective while riding forward, which of the two images represents an earlier viewpoint?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 1",
+        "predicted_choice": "B",
+        "predicted_answer": "B. Image 2 represents an earlier viewpoint. In Image 2, the cyclist is on a path approaching an area. The signs visible on the right side of the path in Image 2 (a red \"no bicycles\" sign and a blue \"shared path for pedestrians and cyclists\" sign) are the same signs seen further along the road near the Penny store in Image 1. Image 1 shows the cyclist at an intersection with a red bike lane, a traffic light, and the \"Max-Lebsche-Platz\" street sign, indicating a more advanced position. Therefore, riding forward, a cyclist would encounter the scene in Image 2 before arriving at the intersection shown in Image 1.",
+        "correct": false
+      },
+      {
+        "index": 5,
+        "images": [
+          "static/trajectories/temporal_ordering/5.jpg"
+        ],
+        "question": "These two images were captured sequentially during the cyclist's forward travel. Which image was taken first?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 2",
+        "predicted_choice": "A",
+        "predicted_answer": "A. Image 1\nThe blue bicycle sign is closer to the camera in Image 1 than in Image 2. Since the images were captured sequentially during forward travel, the cyclist must have moved past the sign, causing it to appear further away in the subsequent image. Therefore, Image 1 was taken first.",
+        "correct": false
+      },
+      {
+        "index": 6,
+        "images": [
+          "static/trajectories/temporal_ordering/6.jpg"
+        ],
+        "question": "During continuous forward motion, the cyclist took these two photos. Which one was captured first in time?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 2",
+        "predicted_choice": "A",
+        "predicted_answer": "A. Image 1\n\nReasoning: In Image 2, on the far left side of the road in the distance, you can clearly see the same sign pole with the red \"No Cycling\" sign and the blue \"Shared Path\" sign that are prominently in the foreground of Image 1. This indicates that the cyclist has moved past the location shown in Image 1 and is now further along the path at the intersection depicted in Image 2.",
+        "correct": false
+      },
+      {
+        "index": 7,
+        "images": [
+          "static/trajectories/temporal_ordering/7.jpg"
+        ],
+        "question": "As the cyclist progressed along the road, which of these two views corresponds to the earlier moment?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 2",
+        "predicted_choice": "A",
+        "predicted_answer": "A. Image 1\nIn Image 1, the bus stop and the bicycle sign are in the foreground on the right side of the road. In Image 2, the same bus stop and bicycle sign are visible further in the background, with an intersection and traffic lights now in the foreground. This indicates that the cyclist has progressed past the initial point shown in Image 1 to reach the location depicted in Image 2. Therefore, Image 1 corresponds to the earlier moment.",
+        "correct": false
+      },
+      {
+        "index": 8,
+        "images": [
+          "static/trajectories/temporal_ordering/8.jpg"
+        ],
+        "question": "While the cyclist was moving forward, two snapshots were captured moments apart. Which image shows the earlier point in the journey?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 2",
+        "predicted_choice": "A",
+        "predicted_answer": "A. Image 1\nIn Image 1, the street sign \"Am Wiesenbach\" is prominent on the right side of the road. In Image 2, an Esso gas station is prominent on the right, and the \"Am Wiesenbach\" sign is now further in the background and to the left, indicating that the cyclist has moved past the intersection where \"Am Wiesenbach\" begins.",
+        "correct": false
+      },
+      {
+        "index": 9,
+        "images": [
+          "static/trajectories/temporal_ordering/9.jpg"
+        ],
+        "question": "During continuous forward motion, the cyclist took these two photos. Which one was captured first in time?",
+        "choices": [
+          "Image 1",
+          "Image 2"
+        ],
+        "gt_answer": "Image 1",
+        "predicted_choice": "A",
+        "predicted_answer": "A. Image 1\n\nIn Image 1, a pole with a red triangular sign and a yellow diamond-shaped sign is visible in the immediate foreground on the right. In Image 2, this pole and signs are no longer visible, indicating the cyclist has moved past them. Also, the green truck on the left side of the road appears further away in Image 1 and closer to the camera in Image 2, consistent with forward motion.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "code": "TSR+S",
+    "label": "Traffic Sign Recognition (+Spatial)",
+    "slug": "region_based_traffic_sign_recognition",
+    "examples": [
+      {
+        "index": 0,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/0.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). What is the correct description of the traffic sign visible in that region?",
+        "choices": [
+          "Warning sign indicating a general hazard ahead; exercise extra caution",
+          "Regulatory sign indicating the end of a 30 km/h road segment",
+          "Regulatory sign prohibiting any vehicle from stopping",
+          "Regulatory sign prohibiting parking, short stops allowed for up to 3 minutes",
+          "Regulatory sign limiting the maximum allowed speed to 30 km/h",
+          "Regulatory sign limiting the maximum allowed speed to 60 km/h",
+          "Combined sign indicating no entry to all vehicles except bicycles"
+        ],
+        "gt_answer": "Regulatory sign limiting the maximum allowed speed to 30 km/h",
+        "predicted_choice": "Regulatory sign limiting the maximum allowed speed to 30 km/h",
+        "predicted_answer": "E. Regulatory sign limiting the maximum allowed speed to 30 km/h",
+        "correct": true
+      },
+      {
+        "index": 1,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/1.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). Which traffic sign description most accurately refers to the sign visible in that region?",
+        "choices": [
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Direction sign indicating that you have priority at the next intersection only",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating parallel separated paths\u2014one for cyclists and one for pedestrians"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "B. Regulatory sign indicating a mandatory bicycle-only lane",
+        "correct": true
+      },
+      {
+        "index": 2,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/2.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). Which traffic sign description most accurately refers to the sign visible in that region?",
+        "choices": [
+          "Regulatory sign prohibiting pedestrian entry to this path",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Warning sign indicating traffic lights ahead"
+        ],
+        "gt_answer": "Regulatory sign indicating a shared path for pedestrians and cyclists",
+        "predicted_choice": "Regulatory sign indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+        "predicted_answer": "E. Regulatory sign indicating parallel separated paths\u2014one for cyclists and one for pedestrians\nReasoning: The blue circular sign with white symbols is a mandatory regulatory sign. The sign depicts a pedestrian (adult and child) above a horizontal line, and a bicycle below it. This specific design, with the horizontal dividing line, indicates that there are separate, parallel paths designated for pedestrians and cyclists, and users must use their respective designated sections.",
+        "correct": false
+      },
+      {
+        "index": 3,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/3.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). Which official traffic sign description best represents the sign that appears in that region?",
+        "choices": [
+          "Warning sign indicating presence of children nearby, typically near schools or playgrounds",
+          "Regulatory sign prohibiting pedestrian entry to this path",
+          "Regulatory sign prohibiting entry of motor vehicles, unless exempted",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign indicating a complete street primarily designated for cyclists who have priority",
+          "Regulatory sign prohibiting cycling"
+        ],
+        "gt_answer": "Regulatory sign prohibiting cycling",
+        "predicted_choice": "Regulatory sign prohibiting cycling",
+        "predicted_answer": "G. Regulatory sign prohibiting cycling",
+        "correct": true
+      },
+      {
+        "index": 4,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/4.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). Which official traffic sign description best represents the sign that appears in that region?",
+        "choices": [
+          "Direction sign marking entry into a traffic-controlled residential area where walking pace is required and pedestrians, playing children have special priority",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "F. Regulatory sign indicating a mandatory bicycle-only lane",
+        "correct": true
+      },
+      {
+        "index": 5,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/5.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). Which traffic sign description most accurately refers to the sign visible in that region?",
+        "choices": [
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign allowing only straight ahead or left turns",
+          "Regulatory sign indicating a mandatory bicycle-only lane"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "G. Regulatory sign indicating a mandatory bicycle-only lane",
+        "correct": true
+      },
+      {
+        "index": 6,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/6.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). Which official traffic sign description best represents the sign that appears in that region?",
+        "choices": [
+          "Regulatory sign indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Combined sign indicating no entry to all vehicles except bicycles",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Warning sign indicating roadworks ahead",
+          "Regulatory sign indicating a mandatory bicycle-only lane"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": null,
+        "predicted_answer": "The region marked <1> contains two signs:\n1.  A red circular sign with a white number \"1\" inside.\n2.  A blue circular sign below it, with white pictograms of a pedestrian and a bicycle, clearly separated by a vertical white line.\n\nLet's analyze the signs:\n*   The red circular sign with \"1\" is unusual. A red circle usually indicates a prohibition or a mandatory limit (like speed limit), but a speed limit of \"1\" is nonsensical. It's not a standard German traffic sign for a route number either, which usually has a different design.\n*   The blue circular sign below it, showing a pedestrian and a bicycle separated by a vertical line, is a standard European regulatory sign (specifically, German sign 241, \"Getrennter Geh- und Radweg\"). This sign mandates that pedestrians and cyclists use separate, parallel paths.\n\nConsidering the options and the requirement for an \"official traffic sign description,\" the blue sign is a clear and identifiable official traffic sign. The red \"1\" sign is ambiguous in its official capacity and meaning in this context. Therefore, we should focus on the clearly identifiable official sign within the marked region.\n\nLet's evaluate the options against the blue sign:\n*   **A. Regulatory sign indicating parallel separated paths\u2014one for cyclists and one for pedestrians.** This perfectly matches the description of the blue sign with the pedestrian and bicycle separated by a vertical line.\n*   **B. Regulatory sign indicating a pedestrian-only path (cyclist not permitted).** This would be a blue sign with only a pedestrian. Incorrect.\n*   **C. Combined sign indicating no entry to all vehicles except bicycles.** This would be a \"no entry\" sign with an exception plate, which is not what is shown. Incorrect.\n*   **D. Combined sign indicating a parking area for the bicycles.** This would be a \"P\" sign with a bicycle pictogram. Incorrect.\n*   **E. Regulatory sign indicating a shared path for pedestrians and cyclists.** This would be a blue sign with a pedestrian and bicycle side-by-side but *without* a separating vertical line. The sign clearly shows a separating line. Incorrect.\n*   **F. Warning sign indicating roadworks ahead.** Warning signs are typically triangular and red-bordered. Incorrect.\n*   **G. Regulatory sign indicating a mandatory bicycle-only lane.** This would be a blue sign with only a bicycle. Incorrect.\n\nOption A accurately describes the standard official traffic sign that is clearly visible within the marked region.\n\nThe final answer is $\\boxed{A}$",
+        "correct": false
+      },
+      {
+        "index": 7,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/7.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). Which road sign description corresponds to the sign present in that region?",
+        "choices": [
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign prohibiting pedestrian entry to this path"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "E. Regulatory sign indicating a mandatory bicycle-only lane",
+        "correct": true
+      },
+      {
+        "index": 8,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/8.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). Which official traffic sign description best represents the sign that appears in that region?",
+        "choices": [
+          "Regulatory sign prohibiting pedestrian entry to this path",
+          "Regulatory sign indicating a complete street primarily designated for cyclists who have priority",
+          "Regulatory sign prohibiting entry of motor vehicles, unless exempted",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a mandatory bicycle-only lane"
+        ],
+        "gt_answer": "Regulatory sign prohibiting cycling",
+        "predicted_choice": "Regulatory sign prohibiting cycling",
+        "predicted_answer": "F. Regulatory sign prohibiting cycling",
+        "correct": true
+      },
+      {
+        "index": 9,
+        "images": [
+          "static/trajectories/region_based_traffic_sign_recognition/9.jpg"
+        ],
+        "question": "In the image, focus on the region marked as <1> (highlighted by a red bounding box). Which road sign description corresponds to the sign present in that region?",
+        "choices": [
+          "Regulatory sign prohibiting entry of motor vehicles, unless exempted",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign indicating a complete street primarily designated for cyclists who have priority",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign prohibiting pedestrian entry to this path"
+        ],
+        "gt_answer": "Regulatory sign prohibiting cycling",
+        "predicted_choice": null,
+        "predicted_answer": "The highlighted region contains two signs stacked vertically. The upper sign is a large red circle with a white background and a prominent red numeral \"1\". The lower sign is a smaller rectangular sign with a white background and a red border. Inside this smaller sign, there are two symbols: a bicycle and a passenger car, both crossed out with a red diagonal line.\n\nThe smaller rectangular sign is a standard German supplementary sign (Zusatzzeichen) indicating a prohibition for both bicycles and motor vehicles. When bicycles and motor vehicles are prohibited from using a path, it implies that the path is designated for other users, typically pedestrians.\n\nLet's evaluate the options based on the information conveyed by these signs, especially the clear regulatory message from the smaller sign:\n*   A. Regulatory sign prohibiting entry of motor vehicles, unless exempted. While it prohibits motor vehicles, it also prohibits bicycles, and \"unless exempted\" is not visible.\n*   B. Regulatory sign prohibiting cycling. This is true, as the bicycle symbol is crossed out. However, it's not the full message.\n*   C. Regulatory sign indicating a pedestrian-only path (cyclist not permitted). The \"cyclist not permitted\" part is directly and explicitly shown by the crossed-out bicycle symbol. If both bicycles and motor vehicles are prohibited from a path, it is logically a pedestrian-only path. This option accurately describes the implication and an explicit prohibition.\n*   D. Regulatory sign indicating a shared path for pedestrians and cyclists. Incorrect, as cycling is prohibited.\n*   E. Regulatory sign indicating a complete street primarily designated for cyclists who have priority. Incorrect, as cycling is prohibited.\n*   F. Regulatory sign indicating a mandatory bicycle-only lane. Incorrect, as cycling is prohibited.\n*   G. Regulatory sign prohibiting pedestrian entry to this path. Incorrect, pedestrians are not shown as prohibited.\n\nOption C is the most comprehensive and accurate description of the regulatory information conveyed by the sign. The \"cyclist not permitted\" part is a direct reading, and the \"pedestrian-only path\" is a logical deduction from the prohibition of both bicycles and motor vehicles.\n\nThe final answer is $\\boxed{C}$",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "code": "RED",
+    "label": "Referring Expression Detection",
+    "slug": "refexp",
+    "examples": [
+      {
+        "index": 0,
+        "images": [
+          "static/trajectories/refexp/0.jpg"
+        ],
+        "question": "From the cyclist's perspective, several bounding box regions are marked in the image as <1>, <2>. Which region corresponds to the description: \"Regulatory sign limiting the maximum allowed speed to 30 km/h\"?",
+        "choices": [
+          "<1>",
+          "<2>"
+        ],
+        "gt_answer": "<1>",
+        "predicted_choice": "<1>",
+        "predicted_answer": "A. Region <1> clearly shows a circular sign with a red border and the number \"30\" in the center, which is a standard regulatory sign for a 30 km/h speed limit.",
+        "correct": true
+      },
+      {
+        "index": 1,
+        "images": [
+          "static/trajectories/refexp/1.jpg"
+        ],
+        "question": "From the cyclist's perspective, focus on the bounding box  regions marked <1>, <2>, <3>, <4>. Which region is being referred to as \"Regulatory sign prohibiting cycling\"?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>"
+        ],
+        "gt_answer": "<1>",
+        "predicted_choice": "<1>",
+        "predicted_answer": "A. The sign in region <1> is a red-bordered circular sign with a bicycle symbol, which is a regulatory sign indicating that cycling is prohibited.",
+        "correct": true
+      },
+      {
+        "index": 2,
+        "images": [
+          "static/trajectories/refexp/2.jpg"
+        ],
+        "question": "From the cyclist's perspective, focus on the bounding box  regions marked <1>, <2>. Which region is being referred to as \"Regulatory sign indicating a shared path for pedestrians and cyclists\"?",
+        "choices": [
+          "<1>",
+          "<2>"
+        ],
+        "gt_answer": "<1>",
+        "predicted_choice": "<1>",
+        "predicted_answer": "A. The sign in region <1> shows symbols for both a pedestrian and a cyclist on a blue circular background, indicating a mandatory or shared path for both.",
+        "correct": true
+      },
+      {
+        "index": 3,
+        "images": [
+          "static/trajectories/refexp/3.jpg"
+        ],
+        "question": "From the cyclist's perspective, several bounding box regions are marked in the image as <1>, <2>, <3>, <4>, <5>, <6>. Which region corresponds to the description: \"Regulatory sign prohibiting cycling\"?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>",
+          "<5>",
+          "<6>"
+        ],
+        "gt_answer": "<2>",
+        "predicted_choice": "<2>",
+        "predicted_answer": "B. Region <2> contains a regulatory sign (red circle with a bicycle crossed out) which explicitly prohibits cycling. While this region also contains another sign for a shared path, the prohibitive sign is clearly present within this bounding box. Region <6> specifically marks the shared path sign, which permits cycling.",
+        "correct": true
+      },
+      {
+        "index": 4,
+        "images": [
+          "static/trajectories/refexp/4.jpg"
+        ],
+        "question": "From the cyclist's perspective, focus on the bounding box  regions marked <1>, <2>, <3>, <4>. Which region is being referred to as \"Regulatory sign indicating a mandatory bicycle-only lane\"?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>",
+          "<4>"
+        ],
+        "gt_answer": "<2>",
+        "predicted_choice": "<2>",
+        "predicted_answer": "B. Bounding box <2> clearly highlights a blue circular sign with a white bicycle symbol, which is the international regulatory sign indicating a mandatory bicycle-only lane or cycle path.",
+        "correct": true
+      },
+      {
+        "index": 5,
+        "images": [
+          "static/trajectories/refexp/5.jpg"
+        ],
+        "question": "From the cyclist's perspective in this image, which among bounding box regions  <1>, <2>, <3> corresponds to the description: \"Warning sign indicating an uneven or bumpy road ahead\"?",
+        "choices": [
+          "<1>",
+          "<2>",
+          "<3>"
+        ],
+        "gt_answer": "<2>",
+        "predicted_choice": "<2>",
+        "predicted_answer": "B. Bounding box <2> shows a triangular warning sign with a red border and a symbol depicting two bumps, which universally indicates an uneven road, speed bumps, or road humps ahead.",
+        "correct": true
+      },
+      {
+        "index": 6,
+        "images": [
+          "static/trajectories/refexp/6.jpg"
+        ],
+        "question": "From the cyclist's perspective in this scene, which of the marked bounding box regions <1>, <2> corresponds to the phrase: \"Warning sign indicating cyclists or bicycle traffic ahead\"?",
+        "choices": [
+          "<1>",
+          "<2>"
+        ],
+        "gt_answer": "<2>",
+        "predicted_choice": "<2>",
+        "predicted_answer": "B. The sign in bounding box <2> is a triangular warning sign with a bicycle symbol, which indicates bicycle traffic or cyclists ahead. The sign in bounding box <1> is a \"Yield\" or \"Give Way\" sign.",
+        "correct": true
+      },
+      {
+        "index": 7,
+        "images": [
+          "static/trajectories/refexp/7.jpg"
+        ],
+        "question": "From the cyclist's perspective in this image, which among bounding box regions  <1>, <2> corresponds to the description: \"Regulatory sign indicating a mandatory bicycle-only lane\"?",
+        "choices": [
+          "<1>",
+          "<2>"
+        ],
+        "gt_answer": "<2>",
+        "predicted_choice": "<2>",
+        "predicted_answer": "B. <2> shows a blue circular sign with a white bicycle symbol, which is the standard regulatory sign for a mandatory bicycle path or lane.",
+        "correct": true
+      },
+      {
+        "index": 8,
+        "images": [
+          "static/trajectories/refexp/8.jpg"
+        ],
+        "question": "From the cyclist's perspective in this image, which among bounding box regions  <1>, <2> corresponds to the description: \"Regulatory sign indicating a mandatory bicycle-only lane\"?",
+        "choices": [
+          "<1>",
+          "<2>"
+        ],
+        "gt_answer": "<2>",
+        "predicted_choice": "<1>",
+        "predicted_answer": "A. Bounding box <1> contains a blue circular sign with a white bicycle symbol, which is a regulatory sign indicating a mandatory bicycle-only lane (Radweg in Germany).",
+        "correct": false
+      },
+      {
+        "index": 9,
+        "images": [
+          "static/trajectories/refexp/9.jpg"
+        ],
+        "question": "From the cyclist's perspective, focus on the bounding box  regions marked <1>, <2>. Which region is being referred to as \"Direction sign marking the beginning of a priority road and you have priority all intersections ahead\"?",
+        "choices": [
+          "<1>",
+          "<2>"
+        ],
+        "gt_answer": "<2>",
+        "predicted_choice": "<2>",
+        "predicted_answer": "B. <2> is the priority road sign, indicating priority at upcoming intersections.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "code": "TSR",
+    "label": "Traffic Sign Recognition",
+    "slug": "traffic_sign_recognition",
+    "examples": [
+      {
+        "index": 0,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/0.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign prohibiting cycling",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Direction sign marking exit from a traffic-calmed residential area"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "F. The prominent blue circular sign with a white bicycle symbol indicates a mandatory bicycle-only lane, meaning cyclists must use this path.",
+        "correct": true
+      },
+      {
+        "index": 1,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/1.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign prohibiting pedestrian entry to this path",
+          "Regulatory sign marking the end of a pedestrian-only zone",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)"
+        ],
+        "gt_answer": "Regulatory sign indicating a shared path for pedestrians and cyclists",
+        "predicted_choice": "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+        "predicted_answer": "E. Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+        "correct": false
+      },
+      {
+        "index": 2,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/2.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Combined sign indicating a pedestrian-priority path where bicycles are permitted",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "F. The sign shown is a blue circular sign with a white bicycle symbol (German traffic sign 237), which indicates a mandatory cycle path. Below it is an auxiliary sign with a bicycle symbol and a double-headed arrow, signifying that it is a two-way cycle path. This means the path is designated for and mandatory for cyclists, and generally not shared with pedestrians.",
+        "correct": true
+      },
+      {
+        "index": 3,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/3.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign allowing only straight ahead or left turns",
+          "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign prohibiting cycling"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "F. Regulatory sign indicating a mandatory bicycle-only lane\nReasoning: The blue circular sign with a white bicycle symbol (visible in the original image and crop 5) is a standard regulatory sign for a mandatory bicycle path or lane, meaning cyclists must use it and it is typically exclusively for bicycles.",
+        "correct": true
+      },
+      {
+        "index": 4,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/4.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign marking the beginning of a pedestrian-only zone",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "E. The blue circular sign with a white bicycle symbol is a regulatory sign indicating a mandatory bicycle-only lane or path.",
+        "correct": true
+      },
+      {
+        "index": 5,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/5.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign prohibiting entry of motor vehicles, unless exempted",
+          "Regulatory sign indicating a complete street primarily designated for cyclists who have priority",
+          "Regulatory sign prohibiting pedestrian entry to this path",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)"
+        ],
+        "gt_answer": "Regulatory sign prohibiting cycling",
+        "predicted_choice": "Regulatory sign prohibiting cycling",
+        "predicted_answer": "A. Regulatory sign prohibiting cycling\nReasoning: The image clearly shows a round white sign with a red border and a black bicycle symbol in the center, which is a universally recognized regulatory sign prohibiting cycling.",
+        "correct": true
+      },
+      {
+        "index": 6,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/6.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Combined sign indicating a parking area for the bicycles",
+          "Warning sign indicating slippery road conditions ahead, especially when wet",
+          "Regulatory sign indicating a mandatory bicycle-only lane"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "G. Regulatory sign indicating a mandatory bicycle-only lane",
+        "correct": true
+      },
+      {
+        "index": 7,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/7.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Combined sign indicating a pedestrian-priority path where bicycles are permitted"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "E. The visible blue circular sign with a white bicycle symbol indicates a mandatory bicycle-only lane, directing cyclists to use that specific path.",
+        "correct": true
+      },
+      {
+        "index": 8,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/8.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)",
+          "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign indicating a one-way street",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign prohibiting cycling",
+          "Regulatory sign indicating a mandatory bicycle-only lane"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "G. The blue circular sign with a white bicycle symbol visible on the right side of the path ahead indicates a mandatory bicycle-only lane or path.",
+        "correct": true
+      },
+      {
+        "index": 9,
+        "images": [
+          "static/trajectories/traffic_sign_recognition/9.jpg"
+        ],
+        "question": "In the image captured from the cyclist\u2019s forward viewpoint, which single traffic sign pole from the given below options explictly appears along the route ahead?",
+        "choices": [
+          "Regulatory sign indicating a mandatory bicycle-only lane",
+          "Regulatory sign indicating a shared path for pedestrians and cyclists",
+          "Combined sign indicating a parking area for the bicycles",
+          "Regulatory sign prohibiting cycling",
+          "Warning sign indicating a general hazard ahead; exercise extra caution",
+          "Regulatory sign explicitly indicating parallel separated paths\u2014one for cyclists and one for pedestrians",
+          "Regulatory sign indicating a pedestrian-only path (cyclist not permitted)"
+        ],
+        "gt_answer": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_choice": "Regulatory sign indicating a mandatory bicycle-only lane",
+        "predicted_answer": "A. Regulatory sign indicating a mandatory bicycle-only lane\n\nReasoning: On the pole directly in front, below the bicycle traffic light and the yield sign, there is a round blue sign with a white bicycle symbol. This sign (StVO Zeichen 237 in Germany) indicates a mandatory cycle track or bicycle-only lane. Another identical sign is visible on a separate pole further to the left.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "code": "LR",
+    "label": "Lane Recognition",
+    "slug": "bicycle_lane_prediction",
+    "examples": [
+      {
+        "index": 0,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/0.jpg"
+        ],
+        "question": "Among the labeled and shaded lanes, which lane label indicates the cyclist lane?",
+        "choices": [
+          "Lane 2",
+          "Lane 0",
+          "Lane 1"
+        ],
+        "gt_answer": "Lane 1",
+        "predicted_choice": "Lane 1",
+        "predicted_answer": "C. Lane 1 is the narrow, distinctively shaded path positioned between the wider pedestrian path (Lane 0) and the car road (Lane 2), which is typical for a dedicated cyclist lane.",
+        "correct": true
+      },
+      {
+        "index": 1,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/1.jpg"
+        ],
+        "question": "The lanes are shaded and labeled numerically. Which labeled lane corresponds to the cyclist lane?",
+        "choices": [
+          "Lane 0",
+          "Lane 1"
+        ],
+        "gt_answer": "Lane 1",
+        "predicted_choice": "Lane 1",
+        "predicted_answer": "B. Lane 1 has a bicycle symbol and an arrow painted on its surface, indicating it is a cyclist lane.",
+        "correct": true
+      },
+      {
+        "index": 2,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/2.jpg"
+        ],
+        "question": "Considering the shaded overlays and lane labels, which lane corresponds to the cyclist lane?",
+        "choices": [
+          "Lane 1",
+          "Lane 0"
+        ],
+        "gt_answer": "Lane 0",
+        "predicted_choice": "Lane 0",
+        "predicted_answer": "B. Lane 0 is marked with a bicycle symbol and an arrow, indicating it is designated for cyclists.",
+        "correct": true
+      },
+      {
+        "index": 3,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/3.jpg"
+        ],
+        "question": "Based on the shading and labels shown in the image, which labeled lane should the cyclist choose?",
+        "choices": [
+          "Lane 1",
+          "Lane 0"
+        ],
+        "gt_answer": "Lane 0",
+        "predicted_choice": "Lane 1",
+        "predicted_answer": "A. Lane 1\nThe blue circular sign above Lane 1 explicitly indicates a mandatory shared path for both pedestrians and cyclists, meaning cyclists should use this lane. The red circular sign, which generally indicates \"no cycling,\" is positioned next to the general road area and not clearly associated with Lane 1.",
+        "correct": false
+      },
+      {
+        "index": 4,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/4.jpg"
+        ],
+        "question": "Each lane is highlighted and labeled. Which labeled lane represents the cyclist lane?",
+        "choices": [
+          "Lane 1",
+          "Lane 0"
+        ],
+        "gt_answer": "Lane 1",
+        "predicted_choice": "Lane 1",
+        "predicted_answer": "A. Lane 1 has a bicycle symbol painted on the ground, an arrow indicating direction, and a blue circular road sign with a bicycle icon, all indicating it is a designated cyclist lane.",
+        "correct": true
+      },
+      {
+        "index": 5,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/5.jpg"
+        ],
+        "question": "Based on the shading and labels shown in the image, which labeled lane should the cyclist choose?",
+        "choices": [
+          "Lane 1",
+          "Lane 2",
+          "Lane 0"
+        ],
+        "gt_answer": "Lane 1",
+        "predicted_choice": "Lane 1",
+        "predicted_answer": "A. Lane 1\nThe blue circular sign indicates a shared path for pedestrians and cyclists. Lane 1 (purple) and Lane 2 (orange) together form this path, separate from the main road (Lane 0). Lane 1 is significantly wider and appears to be the primary lane for movement, making it the most suitable choice for a cyclist on a shared path.",
+        "correct": true
+      },
+      {
+        "index": 6,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/6.jpg"
+        ],
+        "question": "Based on the shading and labels shown in the image, which labeled lane should the cyclist choose?",
+        "choices": [
+          "Lane 0",
+          "Lane 1"
+        ],
+        "gt_answer": "Lane 0",
+        "predicted_choice": "Lane 1",
+        "predicted_answer": "B. The red sign on the left prohibits cycling in the area it governs (likely Lane 0), while the blue sign on the right indicates a mandatory path for both pedestrians and cyclists (likely Lane 1). Therefore, a cyclist should choose Lane 1.",
+        "correct": false
+      },
+      {
+        "index": 7,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/7.jpg"
+        ],
+        "question": "Among the labeled and shaded lanes, which lane label indicates the cyclist lane?",
+        "choices": [
+          "Lane 1",
+          "Lane 0"
+        ],
+        "gt_answer": "Lane 0",
+        "predicted_choice": "Lane 0",
+        "predicted_answer": "B. Lane 0 is indicated as the cyclist lane by the bicycle sign visible next to it and the characteristic arrows painted on its surface.",
+        "correct": true
+      },
+      {
+        "index": 8,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/8.jpg"
+        ],
+        "question": "The lanes are shaded and labeled numerically. Which labeled lane corresponds to the cyclist lane?",
+        "choices": [
+          "Lane 1",
+          "Lane 0"
+        ],
+        "gt_answer": "Lane 0",
+        "predicted_choice": "Lane 0",
+        "predicted_answer": "B. The sign indicating a mandatory cycle path (blue circle with white bicycle) is positioned above Lane 0.",
+        "correct": true
+      },
+      {
+        "index": 9,
+        "images": [
+          "static/trajectories/bicycle_lane_prediction/9.jpg"
+        ],
+        "question": "Each lane is highlighted and labeled. Which labeled lane represents the cyclist lane?",
+        "choices": [
+          "Lane 1",
+          "Lane 0"
+        ],
+        "gt_answer": "Lane 0",
+        "predicted_choice": "Lane 0",
+        "predicted_answer": "B. Lane 0 represents the cyclist lane, indicated by its distinct orange color, the two-way arrows typically found on bike paths, and its proximity to the pedestrian crossing, separate from the main vehicular lane.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "code": "SAA",
+    "label": "Sign-Action Association",
+    "slug": "sign_action_association",
+    "examples": [
+      {
+        "index": 0,
+        "images": [
+          "static/trajectories/sign_action_association/0.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. From the cyclist\u2019s perspective, does the shaded lane (in pink) ahead allow cycling? The shading is externally drawn on the image as an overlay.",
+        "choices": [
+          "Yes, continue riding forward on the labelled lane",
+          "No, cycling is not allowed on this lane"
+        ],
+        "gt_answer": "No, cycling is not allowed on this lane",
+        "predicted_choice": "No, cycling is not allowed on this lane",
+        "predicted_answer": "B. No, cycling is not allowed on this lane because the red circular sign with a bicycle crossed out (a \"No Entry for Bicycles\" sign) is positioned directly next to the pink-shaded lane.",
+        "correct": true
+      },
+      {
+        "index": 1,
+        "images": [
+          "static/trajectories/sign_action_association/1.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. From the cyclist\u2019s forward view, is cycling allowed along the highlighted lane (in pink)? The highlight is externally drawn on the image as an overlay.",
+        "choices": [
+          "No, cycling is not allowed on this lane",
+          "Yes, continue riding on the labelled lane"
+        ],
+        "gt_answer": "Yes, continue riding on the labelled lane",
+        "predicted_choice": "Yes, continue riding on the labelled lane",
+        "predicted_answer": "B. Yes, continue riding on the labelled lane. The blue circular sign with a person and a bicycle (Zeichen 240 in Germany) indicates a shared path for pedestrians and cyclists, meaning cycling is allowed and mandatory on this lane. The red circular sign with a crossed-out bicycle (Zeichen 254) likely applies to the adjacent main road, prohibiting cyclists from using it and directing them onto the shared path.",
+        "correct": true
+      },
+      {
+        "index": 2,
+        "images": [
+          "static/trajectories/sign_action_association/2.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. From the cyclist\u2019s forward view, is cycling allowed along the highlighted lane (in pink)? The highlight is externally drawn on the image as an overlay.",
+        "choices": [
+          "Yes, continue riding on the labelled lane",
+          "No, cycling is not allowed on this lane"
+        ],
+        "gt_answer": "Yes, continue riding on the labelled lane",
+        "predicted_choice": "Yes, continue riding on the labelled lane",
+        "predicted_answer": "A. Yes, continue riding on the labelled lane\nReasoning: The lane is explicitly marked with a bicycle symbol and a forward arrow, and there is a blue circular sign with a bicycle icon, which indicates a mandatory cycle path.",
+        "correct": true
+      },
+      {
+        "index": 3,
+        "images": [
+          "static/trajectories/sign_action_association/3.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. From the cyclist\u2019s perspective, does the shaded lane (in pink) in the image allow cycling? The shading is externally drawn on the image as an overlay.",
+        "choices": [
+          "Yes, continue riding on the labelled lane",
+          "No, cycling is not allowed on this lane"
+        ],
+        "gt_answer": "Yes, continue riding on the labelled lane",
+        "predicted_choice": "Yes, continue riding on the labelled lane",
+        "predicted_answer": "A. Yes, continue riding on the labelled lane\nThe blue circular sign with a pedestrian and a bicycle pictogram indicates a shared path for both, meaning cycling is permitted on this lane.",
+        "correct": true
+      },
+      {
+        "index": 4,
+        "images": [
+          "static/trajectories/sign_action_association/4.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. From the cyclist\u2019s forward view, is cycling allowed along the highlighted lane (in pink)? The highlight is externally drawn on the image as an overlay.",
+        "choices": [
+          "No, cycling is not allowed on this lane",
+          "Yes, continue riding forward on the labelled lane"
+        ],
+        "gt_answer": "No, cycling is not allowed on this lane",
+        "predicted_choice": "No, cycling is not allowed on this lane",
+        "predicted_answer": "A. No, cycling is not allowed on this lane\n\nThe red circular sign with a bicycle symbol crossed by a diagonal line (on the left side of the pole, directly above the highlighted pink lane) is a prohibitory sign meaning \"No cycling\" or \"Bicycles forbidden\". Its placement indicates that it applies to the lane directly beneath it. Therefore, cycling is not allowed on the highlighted pink lane.",
+        "correct": true
+      },
+      {
+        "index": 5,
+        "images": [
+          "static/trajectories/sign_action_association/5.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. Looking at the shaded lane (in pink) in the image, is the cyclist permitted to ride forward? The shading is externally drawn on the image as an overlay.",
+        "choices": [
+          "Yes, continue riding on the labelled lane",
+          "No, cycling is not allowed on this lane"
+        ],
+        "gt_answer": "Yes, continue riding on the labelled lane",
+        "predicted_choice": "Yes, continue riding on the labelled lane",
+        "predicted_answer": "A. Yes, continue riding on the labelled lane\nReasoning: The blue circular sign directly above the shaded lane indicates a combined foot and cycle path, meaning cycling is permitted on this lane.",
+        "correct": true
+      },
+      {
+        "index": 6,
+        "images": [
+          "static/trajectories/sign_action_association/6.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. From the cyclist\u2019s forward view, is cycling allowed along the highlighted lane (in pink)? The highlight is externally drawn on the image as an overlay.",
+        "choices": [
+          "No, cycling is not allowed on this lane",
+          "Yes, continue riding on the labelled lane"
+        ],
+        "gt_answer": "Yes, continue riding on the labelled lane",
+        "predicted_choice": "Yes, continue riding on the labelled lane",
+        "predicted_answer": "B. Yes, continue riding on the labelled lane, as indicated by the distinct red coloring, the bicycle symbols with directional arrows on the lane, and the prominent blue circular sign displaying a white bicycle symbol.",
+        "correct": true
+      },
+      {
+        "index": 7,
+        "images": [
+          "static/trajectories/sign_action_association/7.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. From the cyclist\u2019s perspective, does the shaded lane (in pink) in the image allow cycling? The shading is externally drawn on the image as an overlay.",
+        "choices": [
+          "No, cycling is not allowed on this lane",
+          "Yes, continue riding on the labelled lane"
+        ],
+        "gt_answer": "Yes, continue riding on the labelled lane",
+        "predicted_choice": "Yes, continue riding on the labelled lane",
+        "predicted_answer": "B. Yes, continue riding on the labelled lane. The blue circular sign with a white bicycle symbol indicates a mandatory cycle path, meaning cycling is allowed and expected on this lane.",
+        "correct": true
+      },
+      {
+        "index": 8,
+        "images": [
+          "static/trajectories/sign_action_association/8.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. Looking at the shaded lane (in pink) in the image, is the cyclist permitted to ride forward? The shading is externally drawn on the image as an overlay.",
+        "choices": [
+          "No, cycling is not allowed on this lane",
+          "Yes, continue riding on the labelled lane"
+        ],
+        "gt_answer": "Yes, continue riding on the labelled lane",
+        "predicted_choice": "No, cycling is not allowed on this lane",
+        "predicted_answer": "A. No, cycling is not allowed on this lane\n\nReasoning: The red-colored lane is a designated cycle path, indicated by the white bicycle arrows and the blue sign showing a shared or segregated path for cyclists and pedestrians. However, there is a dedicated small traffic light for bicycles, which is currently red. A red traffic light means cyclists must stop and are not permitted to proceed forward at this time.",
+        "correct": false
+      },
+      {
+        "index": 9,
+        "images": [
+          "static/trajectories/sign_action_association/9.jpg"
+        ],
+        "question": "The image shows a forward-facing view from a cyclist\u2019s perspective. Looking at the shaded lane (in pink) in the image, is the cyclist permitted to ride forward? The shading is externally drawn on the image as an overlay.",
+        "choices": [
+          "No, cycling is not allowed on this lane",
+          "Yes, continue riding on the labelled lane"
+        ],
+        "gt_answer": "Yes, continue riding on the labelled lane",
+        "predicted_choice": "Yes, continue riding on the labelled lane",
+        "predicted_answer": "B. Yes, continue riding on the labelled lane, as indicated by the blue circular sign with a white bicycle symbol, which designates a mandatory cycle path.",
+        "correct": true
+      }
+    ]
+  }
+]
