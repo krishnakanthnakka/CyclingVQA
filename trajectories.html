@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Space+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap">
   <link rel="stylesheet" href="./static/css/index.css?v=2">
-  <link rel="stylesheet" href="./static/css/trajectories.css?v=1">
+  <link rel="stylesheet" href="./static/css/trajectories.css?v=2">
   <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -56,7 +56,7 @@
         </div>
 
         <dl class="traj-meta">
-          <div><dt>Model</dt><dd>gemini-2.5-flash</dd></div>
+          <div><dt>Models</dt><dd>29</dd></div>
           <div><dt>Tasks</dt><dd>8</dd></div>
           <div><dt>Examples shown</dt><dd>10 per task</dd></div>
           <div><dt>Ordering</dt><dd>Dataset order</dd></div>
@@ -65,6 +65,25 @@
     </section>
 
     <div class="page-shell">
+      <details class="model-filter" open>
+        <summary>
+          <span>Filter models</span>
+          <span class="model-filter-count" id="model-filter-count"></span>
+          <span class="model-filter-hint">Choices affect every task below</span>
+        </summary>
+        <div class="model-filter-inner">
+          <div class="model-filter-toolbar">
+            <input class="model-filter-search" id="model-filter-search" type="search" placeholder="Search models…" aria-label="Search models">
+            <div class="model-filter-actions">
+              <button class="model-filter-action" type="button" id="filter-select-default">Reset to default</button>
+              <button class="model-filter-action" type="button" id="filter-select-all">Select all</button>
+              <button class="model-filter-action" type="button" id="filter-select-none">Clear</button>
+            </div>
+          </div>
+          <div class="model-filter-groups" id="model-filter-groups"></div>
+        </div>
+      </details>
+
       <nav class="task-tabs" id="task-tabs" aria-label="Tasks"></nav>
       <div id="task-panels"></div>
     </div>
@@ -83,6 +102,6 @@
     </div>
   </div>
 
-  <script src="./static/js/trajectories.js?v=1"></script>
+  <script src="./static/js/trajectories.js?v=2"></script>
 </body>
 </html>
