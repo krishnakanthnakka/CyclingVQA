@@ -200,6 +200,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   line-height: 1.02;
 }
 .section-lede { max-width: 46ch; padding-bottom: .35rem; color: var(--muted); font-size: .93rem; line-height: 1.72; }
+.inline-link { color: var(--accent); font-weight: 640; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); text-underline-offset: .15em; }
+.inline-link:hover { text-decoration-color: var(--accent); }
 
 /* ============================================================
    Buttons
